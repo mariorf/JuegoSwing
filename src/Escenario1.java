@@ -45,8 +45,10 @@ public class Escenario1 extends JFrame {
 
 
         //Añadir items a los contenedores
-        //EL ORDEN DE ESTO ES BASICAMENTE EL ORDEN DE LAS CAPAS
 
+
+
+        //EL ORDEN DE ESTO ES BASICAMENTE EL ORDEN DE LAS CAPAS
         contentPane.setLayout(null);
         contentPane.add(campoTextoEsc1);
         contentPane.add(ui.getTextBoxLabel());
