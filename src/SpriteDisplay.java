@@ -7,7 +7,7 @@ public class SpriteDisplay {
     public SpriteDisplay(int width, int height) {
 
 
-        spriteLabel.setLocation(150,-230);
+        spriteLabel.setLocation(20,-58);
         spriteLabel.setSize(width, height);
     }
 

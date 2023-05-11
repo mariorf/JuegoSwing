@@ -25,7 +25,7 @@ public class Escenario1 extends JFrame {
         TextoEscenario1 textoEscenario1 = new TextoEscenario1();
         JButton botonPasarTexto = new JButton();
         Font font1 = new Font("Carnevalee Freakshow", Font.PLAIN, 20);
-        SpriteDisplay spriteDisplay = new SpriteDisplay(700,1000);
+        SpriteDisplay spriteDisplay = new SpriteDisplay(850,1100);
         ActaJuicio actaJuicio = new ActaJuicio();
         Background background = new Background();
         UI ui = new UI();
@@ -80,19 +80,15 @@ public class Escenario1 extends JFrame {
                     if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
 
                         campoTextoEsc1.setText(textoEscenario1.arrayTexto.get(numeroTextoActual));
+                        spriteDisplay.setSpriteImage(amaQuiller.amaQuillerSetIdle());
 
                         if(numeroTextoActual == 0){
 
-                            background.setBackground(background.backgroundCortePanoramica());
+                            background.setBackground(background.backgroundStandTestigo());
                         }
                         if(numeroTextoActual == 2){
 
                             ui.setNombrePersonaje("Juez");
-                            background.setBackground(background.backgroundStandTestigo());
-                            spriteDisplay.setSpriteImage(amaQuiller.amaQuillerSetIdleGorro());
-                        }
-                        if(numeroTextoActual == 3){
-                            background.setBackground(background.backgroundStandJuez());
                         }
                         numeroTextoActual++;
                     }

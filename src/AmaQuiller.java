@@ -10,8 +10,43 @@ public class AmaQuiller {
 
 
 
-    public String amaQuillerSetIdleGorro() {
+    public String amaQuillerSetIdle() {
 
-        return "Sprites/AmaQuiller/Gorro1.png";
+        return "Sprites/AmaQuiller/Idle.gif";
+    }
+
+    public String amaQuillerSetLlorando() {
+
+        return "Sprites/AmaQuiller/llorando.gif";
+    }
+
+    public String amaQuillerSetMirandoSerio() {
+
+        return "Sprites/AmaQuiller/mirandoSerio.gif";
+    }
+
+    public String amaQuillerSetMordiendoBola() {
+
+        return "Sprites/AmaQuiller/mordiendoBola.gif";
+    }
+
+    public String amaQuillerSetOjosCerrados() {
+
+        return "Sprites/AmaQuiller/OjosCerrados.gif";
+    }
+
+    public String amaQuillerSetSorprendido() {
+
+        return "Sprites/AmaQuiller/sorprendido.gif";
+    }
+
+    public String amaQuillerSetTapandoBoca() {
+
+        return "Sprites/AmaQuiller/TapandoBoca.gif";
+    }
+
+    public String amaQuillerSetTapandoBoca2() {
+
+        return "Sprites/AmaQuiller/TapandoBoca2.gif";
     }
 }
