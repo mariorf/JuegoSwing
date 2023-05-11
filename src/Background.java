@@ -15,6 +15,11 @@ public class Background {
         return "Sprites/Backgrounds/cortePanoramica.png";
     }
 
+    public String backgroundStandFiscalia(){
+
+        return "Sprites/Backgrounds/standFiscalia.png";
+    }
+
     public String backgroundStandTestigo(){
 
         return "Sprites/Backgrounds/standTestigo.png";

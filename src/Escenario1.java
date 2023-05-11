@@ -16,8 +16,8 @@ public class Escenario1 extends JFrame {
     public Escenario1() throws InterruptedException, IOException {
 
         //Creacion de los objetos para llamar a los sprites de los personajes
-        AmaQuiller amaQuiller = new AmaQuiller();
-
+        AmaQuillerSprites amaQuillerSprites = new AmaQuillerSprites();
+        JuezSprites juezSprites = new JuezSprites();
 
 
         //Crear los objetos
@@ -25,7 +25,8 @@ public class Escenario1 extends JFrame {
         TextoEscenario1 textoEscenario1 = new TextoEscenario1();
         JButton botonPasarTexto = new JButton();
         Font font1 = new Font("Carnevalee Freakshow", Font.PLAIN, 20);
-        SpriteDisplay spriteDisplay = new SpriteDisplay(850,1100);
+        SpriteDisplayTestigos spriteDisplayTestigos = new SpriteDisplayTestigos();
+        SpriteDisplayJuez spriteDisplayJuez = new SpriteDisplayJuez();
         ActaJuicio actaJuicio = new ActaJuicio();
         Background background = new Background();
         UI ui = new UI();
@@ -59,7 +60,8 @@ public class Escenario1 extends JFrame {
         contentPane.add(ui.getNombrePersonajeTextArea());
         contentPane.add(ui.getTextBoxLabel());
         contentPane.add(botonPasarTexto);
-        contentPane.add(spriteDisplay.getSpriteLabel());
+        contentPane.add(spriteDisplayJuez.getSpriteLabel());
+        contentPane.add(spriteDisplayTestigos.getSpriteLabel());
         contentPane.add(background.getBackBroundLabel());
         setVisible(true);
 
@@ -80,15 +82,25 @@ public class Escenario1 extends JFrame {
                     if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
 
                         campoTextoEsc1.setText(textoEscenario1.arrayTexto.get(numeroTextoActual));
-                        spriteDisplay.setSpriteImage(amaQuiller.amaQuillerSetIdle());
+
 
                         if(numeroTextoActual == 0){
 
-                            background.setBackground(background.backgroundStandTestigo());
+                            background.setBackground(background.backgroundCortePanoramica());
+
                         }
                         if(numeroTextoActual == 2){
 
+                            spriteDisplayTestigos.setSpriteImage(null);
+                            background.setBackground(background.backgroundStandJuez());
+                            spriteDisplayJuez.setSpriteImage(juezSprites.juezSetIdle());
                             ui.setNombrePersonaje("Juez");
+                        }
+                        if(numeroTextoActual==3){
+
+                            spriteDisplayTestigos.setSpriteImage(null);
+                            spriteDisplayJuez.setSpriteImage(null);
+                            background.setBackground(background.backgroundStandFiscalia());
                         }
                         numeroTextoActual++;
                     }

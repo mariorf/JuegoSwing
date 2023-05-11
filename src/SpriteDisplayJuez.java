@@ -1,14 +1,14 @@
 import javax.swing.*;
 
-public class SpriteDisplay {
+public class SpriteDisplayJuez {
 
     private JLabel spriteLabel = new JLabel();
 
-    public SpriteDisplay(int width, int height) {
+    public SpriteDisplayJuez() {
 
 
-        spriteLabel.setLocation(20,-58);
-        spriteLabel.setSize(width, height);
+        spriteLabel.setLocation(20,-130);
+        spriteLabel.setSize(850,1100);
     }
 
     public void setSpriteImage(String imagePath) {

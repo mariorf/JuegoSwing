@@ -10,16 +10,16 @@ public class TextoEscenario1 {
     public TextoEscenario1 (){
 
         //0
-        arrayTexto.add("Eres el abogado defensor de un bandido acusado de asesinato, es tu deber junto con la fiscalia el descubirir que es lo que paso el dia del accidente");
+        arrayTexto.add("Eres el abogado defensor de un bandido acusado de asesinato, es tu deber junto con la fiscalia el descubirir que es lo que paso el dia del accidente.");
 
         //1
-        arrayTexto.add("20 de Marzo de 1876, Tribunal de Justicia de Texas");
+        arrayTexto.add("20 de Marzo de 1876, Tribunal de Justicia de Texas.");
 
         //2
-        arrayTexto.add("Se abre la sesion en el juicio del Sr. Ama Quiller");
+        arrayTexto.add("Se abre la sesion en el juicio del Sr. Ama Quiller.");
 
         //3
-        arrayTexto.add("texto");
+        arrayTexto.add("La fiscalia esta lista, su senoria.");
     }
 
     public int getTamañoArray(){
