@@ -15,6 +15,11 @@ public class Escenario1 extends JFrame {
 
     public Escenario1() throws InterruptedException, IOException {
 
+        //Creacion de los objetos para llamar a los sprites de los personajes
+        AmaQuiller amaQuiller = new AmaQuiller();
+
+
+
         //Crear los objetos
         CampoTexto campoTexto = new CampoTexto();
         TextoEscenario1 textoEscenario1 = new TextoEscenario1();
@@ -51,6 +56,7 @@ public class Escenario1 extends JFrame {
         //EL ORDEN DE ESTO ES BASICAMENTE EL ORDEN DE LAS CAPAS
         contentPane.setLayout(null);
         contentPane.add(campoTextoEsc1);
+        contentPane.add(ui.getNombrePersonajeTextArea());
         contentPane.add(ui.getTextBoxLabel());
         contentPane.add(botonPasarTexto);
         contentPane.add(spriteDisplay.getSpriteLabel());
@@ -81,8 +87,9 @@ public class Escenario1 extends JFrame {
                         }
                         if(numeroTextoActual == 2){
 
+                            ui.setNombrePersonaje("Juez");
                             background.setBackground(background.backgroundStandTestigo());
-                            spriteDisplay.setSpriteImage("Sprites/AmaQuiller/Gorro1.png");
+                            spriteDisplay.setSpriteImage(amaQuiller.amaQuillerSetIdleGorro());
                         }
                         if(numeroTextoActual == 3){
                             background.setBackground(background.backgroundStandJuez());
