@@ -18,6 +18,7 @@ public class Escenario1 extends JFrame {
         //Creacion de los objetos para llamar a los sprites de los personajes
         AmaQuillerSprites amaQuillerSprites = new AmaQuillerSprites();
         JuezSprites juezSprites = new JuezSprites();
+        MilesEdgeworthSprites milesEdgeworthSprites = new MilesEdgeworthSprites();
 
 
         //Crear los objetos
@@ -27,6 +28,7 @@ public class Escenario1 extends JFrame {
         Font font1 = new Font("Carnevalee Freakshow", Font.PLAIN, 20);
         SpriteDisplayTestigos spriteDisplayTestigos = new SpriteDisplayTestigos();
         SpriteDisplayJuez spriteDisplayJuez = new SpriteDisplayJuez();
+        SpriteDisplayFiscalia spriteDisplayFiscalia = new SpriteDisplayFiscalia();
         ActaJuicio actaJuicio = new ActaJuicio();
         Background background = new Background();
         UI ui = new UI();
@@ -60,6 +62,7 @@ public class Escenario1 extends JFrame {
         contentPane.add(ui.getNombrePersonajeTextArea());
         contentPane.add(ui.getTextBoxLabel());
         contentPane.add(botonPasarTexto);
+        contentPane.add(spriteDisplayFiscalia.getSpriteLabel());
         contentPane.add(spriteDisplayJuez.getSpriteLabel());
         contentPane.add(spriteDisplayTestigos.getSpriteLabel());
         contentPane.add(background.getBackBroundLabel());
@@ -98,8 +101,10 @@ public class Escenario1 extends JFrame {
                         }
                         if(numeroTextoActual==3){
 
+                            ui.setNombrePersonaje("Miles E.");
                             spriteDisplayTestigos.setSpriteImage(null);
                             spriteDisplayJuez.setSpriteImage(null);
+                            spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetPensando());
                             background.setBackground(background.backgroundStandFiscalia());
                         }
                         numeroTextoActual++;
