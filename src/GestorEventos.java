@@ -1,6 +1,33 @@
+import javax.swing.*;
+
 public class GestorEventos {
 
-    /*public void crearGuión(){
+    CampoTexto campoTexto = new CampoTexto();
+    JTextArea campoTextoEsc1 = new JTextArea();
+
+    Background background = new Background();
+
+    SpriteDisplayTestigos spriteDisplayTestigos = new SpriteDisplayTestigos();
+
+    SpriteDisplayJuez spriteDisplayJuez = new SpriteDisplayJuez();
+
+    SpriteDisplayFiscalia spriteDisplayFiscalia = new SpriteDisplayFiscalia();
+
+    JuezSprites juezSprites = new JuezSprites();
+
+    MilesEdgeworthSprites milesEdgeworthSprites = new MilesEdgeworthSprites();
+
+    AmaQuillerSprites amaQuillerSprites = new AmaQuillerSprites();
+
+    UI ui = new UI();
+
+    TextoEscenario1 textoEscenario1 = new TextoEscenario1();
+
+
+    public void crearGuión(int numeroTextoActual){
+
+
+        campoTextoEsc1 = campoTexto.getAreaTexto();
 
         campoTextoEsc1.setText(textoEscenario1.arrayTexto.get(numeroTextoActual));
 
@@ -24,10 +51,7 @@ public class GestorEventos {
             spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetPensando());
             background.setBackground(background.backgroundStandFiscalia());
         }
-        numeroTextoActual++;
     }
-}
-}*/
 
 }
 

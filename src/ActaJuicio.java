@@ -9,20 +9,25 @@ public class ActaJuicio extends JFrame {
 
     ControladorEvidencia controladorEvidencia = new ControladorEvidencia();
 
+    Container contentPane = new Container();
+
     PruebaAmpliada pruebaAmpliada = new PruebaAmpliada();
 
     //Imagenes tamaño normal de las pruebas
     JLabel labelEscenaCrimen = new JLabel();
 
-    JButton botonPresentar = new JButton();
+    JLabel labelArma = new JLabel();
 
-    Container contentPane = new Container();
+    JButton botonPresentar = new JButton();
 
     JTextArea nombrePruebaField = new JTextArea();
 
 
     //Imagenes en miniatura de las pruebas
     ImageIcon escenarioCrimenMiniatura = new ImageIcon("ActaJuicio/escenarioCrimenMiniatura.jpg");
+
+    ImageIcon armaMiniatura = new ImageIcon("ActaJuicio/armaMiniatura.png");
+
 
     Color colorNegro = new Color(0, 0, 0);
 
@@ -51,10 +56,13 @@ public class ActaJuicio extends JFrame {
         labelEscenaCrimen.setSize(100,100);
         labelEscenaCrimen.setLocation(0,50);
 
+        labelArma.setIcon(armaMiniatura);
+        labelArma.setSize(100,100);
+        labelArma.setLocation(200,50);
+
         labelEscenaCrimen.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
                 System.out.println(Thread.currentThread().getName());
                //Crea una nueva ventana con la prueba y una descripción
                 pruebaAmpliada.setVisible(true);
@@ -64,7 +72,6 @@ public class ActaJuicio extends JFrame {
                         " cuando se le detuvo. El arma homicida pertenecia a la victima. \n\n" +
                         "Se encontro sangre en la mesa, en la pared de enfrente de la mesa y brotando de la cabeza de la victima");
             }
-
             @Override
             public void mousePressed(MouseEvent e) {
             }
@@ -133,7 +140,6 @@ class PruebaAmpliada extends JFrame{
 
         labelImagen.setIcon(imagenAmpliada);
         labelImagen.setSize(799,589);
-
 
 
         contentPane.add(descripcionPrueba);

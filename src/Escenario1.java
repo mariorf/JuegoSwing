@@ -32,6 +32,7 @@ public class Escenario1 extends JFrame {
         ActaJuicio actaJuicio = new ActaJuicio();
         Background background = new Background();
         UI ui = new UI();
+        GestorEventos gestorEventos = new GestorEventos();
 
 
 
@@ -76,7 +77,6 @@ public class Escenario1 extends JFrame {
             public void keyTyped(KeyEvent e) {
 
                 //Para pasar las lineas de dialogo
-
                 if (e.getKeyChar()=='z' || e.getKeyChar()=='Z') {
 
                     System.out.println(Thread.activeCount());
@@ -84,7 +84,7 @@ public class Escenario1 extends JFrame {
                     //Texto introduccion
                     if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
 
-                        /*campoTextoEsc1.setText(textoEscenario1.arrayTexto.get(numeroTextoActual));
+                        campoTextoEsc1.setText(textoEscenario1.arrayTexto.get(numeroTextoActual));
 
                         if(numeroTextoActual == 0){
 
@@ -108,7 +108,7 @@ public class Escenario1 extends JFrame {
                         }
                         numeroTextoActual++;
                     }
-                }*/
+                }
 
                 if (e.getKeyChar()=='A' || e.getKeyChar()=='a'){
                     new Thread(() -> {
@@ -119,8 +119,9 @@ public class Escenario1 extends JFrame {
 
             @Override
             public void keyPressed(KeyEvent e) {
+
             }
-            
+
             @Override
             public void keyReleased(KeyEvent e) {
 

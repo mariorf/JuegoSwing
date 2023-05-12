@@ -20,6 +20,11 @@ public class TextoEscenario1 {
 
         //3
         arrayTexto.add("La fiscalia esta lista, su senoria.");
+
+        //4
+        arrayTexto.add("La defensa esta lista.");
+
+        //5
     }
 
     public int getTamañoArray(){
