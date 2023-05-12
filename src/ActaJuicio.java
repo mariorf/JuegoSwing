@@ -52,18 +52,24 @@ public class ActaJuicio extends JFrame {
         nombrePruebaField.setForeground(colorVerde);
         nombrePruebaField.setBackground(colorNegro);
 
+
+        //MINIATURA ESCENA CRIMEN
         labelEscenaCrimen.setIcon(escenarioCrimenMiniatura);
         labelEscenaCrimen.setSize(100,100);
         labelEscenaCrimen.setLocation(0,50);
+        labelEscenaCrimen.setVisible(false);
 
+        //MINIATURA ARMA
         labelArma.setIcon(armaMiniatura);
         labelArma.setSize(100,100);
-        labelArma.setLocation(200,50);
+        labelArma.setLocation(100,50);
 
+
+        //MOUSE LISTENER ESCENA CRIMEN
         labelEscenaCrimen.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                System.out.println(Thread.currentThread().getName());
+
                //Crea una nueva ventana con la prueba y una descripción
                 pruebaAmpliada.setVisible(true);
                 pruebaAmpliada.setPruebaAmpliada("ActaJuicio/escenarioCrimen.jpg", "Escena crimen", "El cadaver se encontro cerca del acusado, muerto de un disparo a la cabeza por detras. El acusado " +
@@ -91,6 +97,41 @@ public class ActaJuicio extends JFrame {
             }
         });
 
+        labelArma.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+                //Crea una nueva ventana con la prueba y una descripción
+                pruebaAmpliada.setVisible(true);
+                pruebaAmpliada.setPruebaAmpliada("ActaJuicio/escenarioCrimen.jpg", "Escena crimen", "Arma encontrada en el escenario del crimen," +
+                        " esta estaba en la mano del acusado y se disparo una bala.");
+
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+                nombrePruebaField.setText("Arma");
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+                nombrePruebaField.setText(null);
+            }
+        });
+
+        contentPane.add(labelArma);
         contentPane.add(labelEscenaCrimen);
         contentPane.add(nombrePruebaField);
     }

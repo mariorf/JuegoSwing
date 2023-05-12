@@ -96,6 +96,7 @@ public class Escenario1 extends JFrame {
                             spriteDisplayTestigos.setSpriteImage(null);
                             background.setBackground(background.backgroundStandJuez());
                             spriteDisplayJuez.setSpriteImage(juezSprites.juezSetIdle());
+                            actaJuicio.labelEscenaCrimen.setVisible(true);
                             ui.setNombrePersonaje("Juez");
                         }
                         if(numeroTextoActual==3){
