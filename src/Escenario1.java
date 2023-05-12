@@ -84,8 +84,7 @@ public class Escenario1 extends JFrame {
                     //Texto introduccion
                     if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
 
-                        campoTextoEsc1.setText(textoEscenario1.arrayTexto.get(numeroTextoActual));
-
+                        /*campoTextoEsc1.setText(textoEscenario1.arrayTexto.get(numeroTextoActual));
 
                         if(numeroTextoActual == 0){
 
@@ -109,11 +108,8 @@ public class Escenario1 extends JFrame {
                         }
                         numeroTextoActual++;
                     }
-                }
+                }*/
 
-                if (e.getKeyChar()=='r' || e.getKeyChar()=='R'){
-
-                }
                 if (e.getKeyChar()=='A' || e.getKeyChar()=='a'){
                     new Thread(() -> {
                         actaJuicio.setVisible(true);
