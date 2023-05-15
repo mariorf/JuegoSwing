@@ -38,7 +38,7 @@ public class Escenario1 extends JFrame {
         SaveManager saveManager = new SaveManager();
 
         //Borrar¿?
-        GestorEventos gestorEventos = new GestorEventos();
+
 
 
 
@@ -109,7 +109,7 @@ public class Escenario1 extends JFrame {
                             actaJuicio.labelEscenaCrimen.setVisible(true);
                             ui.setNombrePersonaje("Juez");
                         }
-                        if(numeroTextoActual>3 && numeroTextoActual<5){
+                        if(numeroTextoActual>3 && numeroTextoActual<=5){
 
                             System.out.println("Dentro");
                             ui.setNombrePersonaje("Miles E.");
@@ -117,6 +117,10 @@ public class Escenario1 extends JFrame {
                             spriteDisplayJuez.setSpriteImage(null);
                             spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetPensando());
                             background.setBackground(background.backgroundStandFiscalia());
+
+                            if(numeroTextoActual==4){
+                                spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetCondescendiente());
+                            }
                         }
 
                         //CREAR EL GESTOR EVENTOS EN BASE A la UI

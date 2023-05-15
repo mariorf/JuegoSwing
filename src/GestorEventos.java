@@ -1,58 +1,30 @@
 import javax.swing.*;
+import java.awt.*;
 
-public class GestorEventos {
+/*public class GestorEventos {
+    private UI ui;
+    SpriteDisplayTestigos spriteDisplayTestigos;
+    SpriteDisplayJuez spriteDisplayJuez;
+    private SpriteDisplayFiscalia spriteDisplayFiscalia;
+    private Background background;
+    private MilesEdgeworthSprites milesEdgeworthSprites;
 
-    CampoTexto campoTexto = new CampoTexto();
-    JTextArea campoTextoEsc1 = new JTextArea();
-
-    Background background = new Background();
-
-    SpriteDisplayTestigos spriteDisplayTestigos = new SpriteDisplayTestigos();
-
-    SpriteDisplayJuez spriteDisplayJuez = new SpriteDisplayJuez();
-
-    SpriteDisplayFiscalia spriteDisplayFiscalia = new SpriteDisplayFiscalia();
-
-    JuezSprites juezSprites = new JuezSprites();
-
-    MilesEdgeworthSprites milesEdgeworthSprites = new MilesEdgeworthSprites();
-
-    AmaQuillerSprites amaQuillerSprites = new AmaQuillerSprites();
-
-    UI ui = new UI();
-
-    TextoEscenario1 textoEscenario1 = new TextoEscenario1();
+    public GestorEventos(UI ui, SpriteDisplayTestigos spriteDisplayTestigos, SpriteDisplayJuez spriteDisplayJuez,
+                         SpriteDisplayFiscalia spriteDisplayFiscalia, Background background, MilesEdgeworthSprites milesEdgeworthSprites, JuezSprites juezSprites) {
 
 
-    public void crearGuión(int numeroTextoActual){
+        this.ui = ui;
+        this.spriteDisplayTestigos = spriteDisplayTestigos;
+        this.spriteDisplayJuez = spriteDisplayJuez;
+        this.spriteDisplayFiscalia = spriteDisplayFiscalia;
+        this.background = background;
+        this.milesEdgeworthSprites = milesEdgeworthSprites;
 
-
-        campoTextoEsc1 = campoTexto.getAreaTexto();
-
-        campoTextoEsc1.setText(textoEscenario1.arrayTexto.get(numeroTextoActual));
-
-        if(numeroTextoActual == 0){
-
-            background.setBackground(background.backgroundCortePanoramica());
-
-        }
-        if(numeroTextoActual == 2){
-
-            spriteDisplayTestigos.setSpriteImage(null);
-            background.setBackground(background.backgroundStandJuez());
-            spriteDisplayJuez.setSpriteImage(juezSprites.juezSetIdle());
-            ui.setNombrePersonaje("Juez");
-        }
-        if(numeroTextoActual==3){
-
-            ui.setNombrePersonaje("Miles E.");
-            spriteDisplayTestigos.setSpriteImage(null);
-            spriteDisplayJuez.setSpriteImage(null);
-            spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetPensando());
-            background.setBackground(background.backgroundStandFiscalia());
-        }
+        System.out.println("Dentro");
+        ui.setNombrePersonaje("Miles E.");
+        spriteDisplayTestigos.setSpriteImage(null);
+        spriteDisplayJuez.setSpriteImage(null);
+        spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetPensando());
+        background.setBackground(background.backgroundStandFiscalia());
     }
-
-}
-
-
+}*/
