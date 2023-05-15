@@ -25,6 +25,11 @@ public class TextoEscenario1 {
         arrayTexto.add("La defensa esta lista.");
 
         //5
+        arrayTexto.add("La fiscalia esta lista, su senoria.");
+
+        //6
+        arrayTexto.add("Se abre la sesion en el juicio del Sr. Ama Quiller.");
+
     }
 
     public int getTamañoArray(){

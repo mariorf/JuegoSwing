@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Escenario1 extends JFrame {
@@ -32,6 +35,9 @@ public class Escenario1 extends JFrame {
         ActaJuicio actaJuicio = new ActaJuicio();
         Background background = new Background();
         UI ui = new UI();
+        SaveManager saveManager = new SaveManager();
+
+        //Borrar¿?
         GestorEventos gestorEventos = new GestorEventos();
 
 
@@ -47,14 +53,16 @@ public class Escenario1 extends JFrame {
         //Llamada a los metodos de las clases para asignar valores
         campoTextoEsc1 = campoTexto.getAreaTexto();
 
-
-        //Juego en si
-        int controladorDeTexto=0;
-
-
-
-        //Añadir items a los contenedores
-
+        //Cargado, coge la linea en la que te encontrabas segun el guardado anterior y la carga de nuevo
+        //Tambien carga las pruebas si cumples las condiciones necesarias
+        try {
+            numeroTextoActual= saveManager.cargar();
+            if(numeroTextoActual>2){
+                actaJuicio.labelEscenaCrimen.setVisible(true);
+            }
+        } catch (FileNotFoundException ex) {
+            throw new RuntimeException(ex);
+        }
 
 
         //EL ORDEN DE ESTO ES BASICAMENTE EL ORDEN DE LAS CAPAS
@@ -84,6 +92,8 @@ public class Escenario1 extends JFrame {
                     //Texto introduccion
                     if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
 
+
+
                         campoTextoEsc1.setText(textoEscenario1.arrayTexto.get(numeroTextoActual));
 
                         if(numeroTextoActual == 0){
@@ -99,13 +109,24 @@ public class Escenario1 extends JFrame {
                             actaJuicio.labelEscenaCrimen.setVisible(true);
                             ui.setNombrePersonaje("Juez");
                         }
-                        if(numeroTextoActual==3){
+                        if(numeroTextoActual>3 && numeroTextoActual<5){
 
+                            System.out.println("Dentro");
                             ui.setNombrePersonaje("Miles E.");
                             spriteDisplayTestigos.setSpriteImage(null);
                             spriteDisplayJuez.setSpriteImage(null);
                             spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetPensando());
                             background.setBackground(background.backgroundStandFiscalia());
+                        }
+
+                        //CREAR EL GESTOR EVENTOS EN BASE A la UI
+
+
+                        //Guardado, escribe en un documento de texto externo la linea actual en la que te encuentras
+                        try {
+                            saveManager.guardar(numeroTextoActual);
+                        } catch (IOException ex) {
+                            throw new RuntimeException(ex);
                         }
                         numeroTextoActual++;
                     }
@@ -115,6 +136,10 @@ public class Escenario1 extends JFrame {
                     new Thread(() -> {
                         actaJuicio.setVisible(true);
                     }).start();
+                }
+
+                if (e.getKeyChar()=='C' || e.getKeyChar()=='c'){
+
                 }
             }
 
