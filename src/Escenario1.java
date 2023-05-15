@@ -57,7 +57,7 @@ public class Escenario1 extends JFrame {
         //Tambien carga las pruebas si cumples las condiciones necesarias
         try {
             numeroTextoActual= saveManager.cargar();
-            if(numeroTextoActual>2){
+            if(numeroTextoActual>0){
                 actaJuicio.labelEscenaCrimen.setVisible(true);
             }
         } catch (FileNotFoundException ex) {
@@ -77,8 +77,6 @@ public class Escenario1 extends JFrame {
         contentPane.add(background.getBackBroundLabel());
         setVisible(true);
 
-
-
         //Eventos
         botonPasarTexto.addKeyListener(new KeyListener() {
             @Override
@@ -91,8 +89,6 @@ public class Escenario1 extends JFrame {
 
                     //Texto introduccion
                     if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
-
-
 
                         campoTextoEsc1.setText(textoEscenario1.arrayTexto.get(numeroTextoActual));
 
@@ -108,10 +104,15 @@ public class Escenario1 extends JFrame {
                             spriteDisplayJuez.setSpriteImage(juezSprites.juezSetIdle());
                             actaJuicio.labelEscenaCrimen.setVisible(true);
                             ui.setNombrePersonaje("Juez");
+
+                            if(actaJuicio.getPruebaSeleccionada().equals("Arma")){
+                                System.out.println("asd");
+                            }
+
                         }
                         if(numeroTextoActual>3 && numeroTextoActual<=5){
 
-                            System.out.println("Dentro");
+
                             ui.setNombrePersonaje("Miles E.");
                             spriteDisplayTestigos.setSpriteImage(null);
                             spriteDisplayJuez.setSpriteImage(null);
@@ -135,21 +136,15 @@ public class Escenario1 extends JFrame {
                         numeroTextoActual++;
                     }
                 }
-
                 if (e.getKeyChar()=='A' || e.getKeyChar()=='a'){
                     new Thread(() -> {
                         actaJuicio.setVisible(true);
                     }).start();
                 }
-
-                if (e.getKeyChar()=='C' || e.getKeyChar()=='c'){
-
-                }
             }
 
             @Override
             public void keyPressed(KeyEvent e) {
-
             }
 
             @Override

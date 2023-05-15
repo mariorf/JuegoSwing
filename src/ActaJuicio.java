@@ -1,11 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 
 public class ActaJuicio extends JFrame {
+
+
+    String pruebaSeleccionada = "Vacio";
 
     ControladorEvidencia controladorEvidencia = new ControladorEvidencia();
 
@@ -64,7 +64,6 @@ public class ActaJuicio extends JFrame {
         labelArma.setSize(100,100);
         labelArma.setLocation(100,50);
 
-
         //MOUSE LISTENER ESCENA CRIMEN
         labelEscenaCrimen.addMouseListener(new MouseListener() {
             @Override
@@ -97,14 +96,21 @@ public class ActaJuicio extends JFrame {
             }
         });
 
+        //LABEL ARMA
         labelArma.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
 
-                //Crea una nueva ventana con la prueba y una descripción
-                pruebaAmpliada.setVisible(true);
-                pruebaAmpliada.setPruebaAmpliada("ActaJuicio/escenarioCrimen.jpg", "Escena crimen", "Arma encontrada en el escenario del crimen," +
-                        " esta estaba en la mano del acusado y se disparo una bala.");
+                if(SwingUtilities.isLeftMouseButton(e)){
+                    pruebaAmpliada.setVisible(true);
+                    pruebaAmpliada.setPruebaAmpliada("ActaJuicio/escenarioCrimen.jpg", "Escena crimen", "Arma encontrada en el escenario del crimen," +
+                            " esta estaba en la mano del acusado y se disparo una bala.");
+                }
+
+                if(SwingUtilities.isRightMouseButton(e)){
+                    pruebaSeleccionada="Arma";
+                    System.out.println(pruebaSeleccionada);
+                }
 
             }
 
@@ -136,6 +142,10 @@ public class ActaJuicio extends JFrame {
         contentPane.add(nombrePruebaField);
     }
 
+
+    String getPruebaSeleccionada(){
+        return pruebaSeleccionada;
+    }
 
 }
 
