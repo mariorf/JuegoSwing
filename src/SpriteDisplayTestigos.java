@@ -1,6 +1,9 @@
 import javax.swing.*;
 
+
 public class SpriteDisplayTestigos {
+
+    Background background = new Background();
 
     private JLabel spriteLabel = new JLabel();
 

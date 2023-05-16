@@ -22,6 +22,7 @@ public class Escenario1 extends JFrame {
         AmaQuillerSprites amaQuillerSprites = new AmaQuillerSprites();
         JuezSprites juezSprites = new JuezSprites();
         MilesEdgeworthSprites milesEdgeworthSprites = new MilesEdgeworthSprites();
+        NoraMarblerSprites noraMarblerSprites = new NoraMarblerSprites();
 
 
         //Crear los objetos
@@ -114,14 +115,10 @@ public class Escenario1 extends JFrame {
 
 
                             ui.setNombrePersonaje("Miles E.");
-                            spriteDisplayTestigos.setSpriteImage(null);
+                            spriteDisplayTestigos.setSpriteImage(noraMarblerSprites.noraMarblerSetIdle());
                             spriteDisplayJuez.setSpriteImage(null);
-                            spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetPensando());
-                            background.setBackground(background.backgroundStandFiscalia());
-
-                            if(numeroTextoActual==4){
-                                spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetCondescendiente());
-                            }
+                            spriteDisplayFiscalia.setSpriteImage(null);
+                            background.setBackground(background.backgroundStandTestigo());
                         }
 
                         //CREAR EL GESTOR EVENTOS EN BASE A la UI
