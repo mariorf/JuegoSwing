@@ -25,7 +25,7 @@ public class TextoEscenario1 {
         arrayTexto.add("La defensa esta lista.");
 
         //5
-        arrayTexto.add("Bien, empezaremos con un breve resumen del caso, abogado defensor, podria darnos un resumen del escenario del crimen?");
+        arrayTexto.add("Bien, empezaremos con un breve resumen del caso, abogado defensor, adelante.");
 
         //6
         arrayTexto.add("En el tribunal lo mas importante es poder respaldar tus alegatos con pruebas solidas, para objetar a la fiscalia tendras tambien que presentar" +
@@ -36,6 +36,11 @@ public class TextoEscenario1 {
         //8
         arrayTexto.add("El juez te ha pedido un breve resumen del caso, pulsa la tecla A y haz click derecho sobre escena del crimen para seleccionarla, entonces pulsa" +
                 " P para presentarla en el dialogo correcto.");
+        //9
+        arrayTexto.add("Defensa, por favor, un breve resumen de la escena del crimen.");
+
+        //10
+        arrayTexto.add("asdasdasd");
     }
 
     public int getTamañoArray(){

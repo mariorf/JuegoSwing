@@ -9,6 +9,8 @@ import java.io.IOException;
 
 public class Escenario1 extends JFrame {
 
+    boolean repetir = false;
+
     int numeroTextoActual=0;
 
     JLayeredPane contentPane = new JLayeredPane();
@@ -90,7 +92,7 @@ public class Escenario1 extends JFrame {
                 if (e.getKeyChar()=='z' || e.getKeyChar()=='Z') {
 
                     //Texto introduccion
-                    if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
+                    if (numeroTextoActual <= textoEscenario1.getTamañoArray()&&repetir==false) {
 
                         campoTextoEsc1.setText(textoEscenario1.arrayTexto.get(numeroTextoActual));
 
@@ -117,7 +119,7 @@ public class Escenario1 extends JFrame {
                         }
                         if(numeroTextoActual==4){
 
-                            ui.setNombrePersonaje("Miles E.");
+                            ui.setNombrePersonaje("Defensa");
                             spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetLlorando());
                             spriteDisplayJuez.setSpriteImage(null);
                             spriteDisplayFiscalia.setSpriteImage(null);
@@ -133,11 +135,19 @@ public class Escenario1 extends JFrame {
                         }
                         if(numeroTextoActual>6 && numeroTextoActual<8){
 
-                            ui.setNombrePersonaje("Narrador");
+                            ui.setNombrePersonaje("Tutorial");
                             spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetIdle());
                             spriteDisplayJuez.setSpriteImage(null);
                             spriteDisplayFiscalia.setSpriteImage(null);
                             background.setBackground(background.backgroundStandTestigo());
+                        }
+                        if(numeroTextoActual==9){
+
+                            spriteDisplayTestigos.setSpriteImage(null);
+                            background.setBackground(background.backgroundStandJuez());
+                            spriteDisplayJuez.setSpriteImage(juezSprites.juezSetIdle());
+                            actaJuicio.labelEscenaCrimen.setVisible(true);
+                            ui.setNombrePersonaje("Juez");
                         }
 
                         //CREAR EL GESTOR EVENTOS EN BASE A la UI
@@ -153,9 +163,7 @@ public class Escenario1 extends JFrame {
                     }
                 }
 
-                if(e.getKeyChar()=='p' && actaJuicio.getPruebaSeleccionada()=="Arma"&&numeroTextoActual==1){
-                    System.out.println("asd");
-                }
+
 
                 if (e.getKeyChar()=='A' || e.getKeyChar()=='a'){
                     new Thread(() -> {
