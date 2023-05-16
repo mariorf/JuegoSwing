@@ -25,19 +25,19 @@ public class TextoEscenario1 {
         arrayTexto.add("La defensa esta lista.");
 
         //5
-        arrayTexto.add("Bien, empezaremos con un breve resumen del caso, abogado defensor, adelante.");
+        arrayTexto.add("Bien, empezaremos con un breve resumen del caso, abogado defensor \n Cual fue el arma homicida?");
 
         //6
         arrayTexto.add("En el tribunal lo mas importante es poder respaldar tus alegatos con pruebas solidas, para objetar a la fiscalia tendras tambien que presentar" +
                 "pruebas y demostrar su error.");
         //7
         arrayTexto.add("Las pruebas se te iran dando durante el transcurso del juicio, puedes " +
-                "verlas en todo momento pulsando la tecla A.");
+                "verlas en todo momento pulsando la tecla A. ");
         //8
-        arrayTexto.add("El juez te ha pedido un breve resumen del caso, pulsa la tecla A y haz click derecho sobre escena del crimen para seleccionarla, entonces pulsa" +
+        arrayTexto.add("El juez te ha pedido el arma homicida, pulsa la tecla A y haz click derecho sobre el arma para seleccionarla, entonces pulsa" +
                 " P para presentarla en el dialogo correcto.");
         //9
-        arrayTexto.add("Defensa, por favor, un breve resumen de la escena del crimen.");
+        arrayTexto.add("Y bien, defensa?");
 
         //10
         arrayTexto.add("asdasdasd");

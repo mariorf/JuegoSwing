@@ -55,9 +55,9 @@ public class ActaJuicio extends JFrame {
         labelEscenaCrimen.setIcon(escenarioCrimenMiniatura);
         labelEscenaCrimen.setSize(100,100);
         labelEscenaCrimen.setLocation(0,50);
-        labelEscenaCrimen.setVisible(false);
 
         //MINIATURA ARMA
+        labelArma.setVisible(false);
         labelArma.setIcon(armaMiniatura);
         labelArma.setSize(100,100);
         labelArma.setLocation(100,50);

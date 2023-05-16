@@ -60,13 +60,11 @@ public class Escenario1 extends JFrame {
         //Tambien carga las pruebas si cumples las condiciones necesarias
         try {
             numeroTextoActual= saveManager.cargar();
-            if(numeroTextoActual>0){
-                actaJuicio.labelEscenaCrimen.setVisible(true);
-            }
         } catch (FileNotFoundException ex) {
             throw new RuntimeException(ex);
         }
 
+        System.out.println("asd");
 
         //EL ORDEN DE ESTO ES BASICAMENTE EL ORDEN DE LAS CAPAS
         contentPane.setLayout(null);
@@ -88,12 +86,24 @@ public class Escenario1 extends JFrame {
             @Override
             public void keyTyped(KeyEvent e) {
                 System.out.println(numeroTextoActual);
+
+                //PONER PRUEBAS SEGUN POSICION EN DIALOGO
+                if(numeroTextoActual>0){
+                    actaJuicio.labelEscenaCrimen.setVisible(true);
+                }
+                if(numeroTextoActual>=8){
+                    actaJuicio.labelArma.setVisible(true);
+                }
+
                 //Para pasar las lineas de dialogo
                 if (e.getKeyChar()=='z' || e.getKeyChar()=='Z') {
 
-                    //Texto introduccion
-                    if (numeroTextoActual <= textoEscenario1.getTamañoArray()&&repetir==false) {
+                    if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
 
+
+
+
+                        //ESTA LINEA PONE EL DIALOGO DESPUES DE QUE EL CONTADOR SUME 1
                         campoTextoEsc1.setText(textoEscenario1.arrayTexto.get(numeroTextoActual));
 
                         if(numeroTextoActual == 0){
@@ -148,6 +158,7 @@ public class Escenario1 extends JFrame {
                             spriteDisplayJuez.setSpriteImage(juezSprites.juezSetIdle());
                             actaJuicio.labelEscenaCrimen.setVisible(true);
                             ui.setNombrePersonaje("Juez");
+
                         }
 
                         //CREAR EL GESTOR EVENTOS EN BASE A la UI
