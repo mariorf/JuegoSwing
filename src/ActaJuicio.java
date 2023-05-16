@@ -7,8 +7,6 @@ public class ActaJuicio extends JFrame {
 
     String pruebaSeleccionada = "Vacio";
 
-    ControladorEvidencia controladorEvidencia = new ControladorEvidencia();
-
     Container contentPane = new Container();
 
     PruebaAmpliada pruebaAmpliada = new PruebaAmpliada();

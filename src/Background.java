@@ -1,6 +1,7 @@
 import javax.swing.*;
 
 public class Background {
+
     private JLabel backgroundLabel = new JLabel();
 
     public void setBackground(String path){

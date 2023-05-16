@@ -78,15 +78,16 @@ public class Escenario1 extends JFrame {
         contentPane.add(background.getBackBroundLabel());
         setVisible(true);
 
+
+
         //Eventos
         botonPasarTexto.addKeyListener(new KeyListener() {
+
             @Override
             public void keyTyped(KeyEvent e) {
-
+                System.out.println(numeroTextoActual);
                 //Para pasar las lineas de dialogo
                 if (e.getKeyChar()=='z' || e.getKeyChar()=='Z') {
-
-                    System.out.println(Thread.activeCount());
 
                     //Texto introduccion
                     if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
@@ -105,17 +106,35 @@ public class Escenario1 extends JFrame {
                             spriteDisplayJuez.setSpriteImage(juezSprites.juezSetIdle());
                             actaJuicio.labelEscenaCrimen.setVisible(true);
                             ui.setNombrePersonaje("Juez");
-
-                            if(actaJuicio.getPruebaSeleccionada().equals("Arma")){
-                                System.out.println("asd");
-                            }
-
                         }
-                        if(numeroTextoActual>3 && numeroTextoActual<=5){
-
+                        if(numeroTextoActual==3){
 
                             ui.setNombrePersonaje("Miles E.");
-                            spriteDisplayTestigos.setSpriteImage(noraMarblerSprites.noraMarblerSetIdle());
+                            spriteDisplayTestigos.setSpriteImage(null);
+                            spriteDisplayJuez.setSpriteImage(null);
+                            spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetIdle());
+                            background.setBackground(background.backgroundStandFiscalia());
+                        }
+                        if(numeroTextoActual==4){
+
+                            ui.setNombrePersonaje("Miles E.");
+                            spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetLlorando());
+                            spriteDisplayJuez.setSpriteImage(null);
+                            spriteDisplayFiscalia.setSpriteImage(null);
+                            background.setBackground(background.backgroundStandTestigo());
+                        }
+                        if(numeroTextoActual==5){
+
+                            spriteDisplayTestigos.setSpriteImage(null);
+                            background.setBackground(background.backgroundStandJuez());
+                            spriteDisplayJuez.setSpriteImage(juezSprites.juezSetIdle());
+                            actaJuicio.labelEscenaCrimen.setVisible(true);
+                            ui.setNombrePersonaje("Juez");
+                        }
+                        if(numeroTextoActual>6 && numeroTextoActual<8){
+
+                            ui.setNombrePersonaje("Narrador");
+                            spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetIdle());
                             spriteDisplayJuez.setSpriteImage(null);
                             spriteDisplayFiscalia.setSpriteImage(null);
                             background.setBackground(background.backgroundStandTestigo());
@@ -133,6 +152,11 @@ public class Escenario1 extends JFrame {
                         numeroTextoActual++;
                     }
                 }
+
+                if(e.getKeyChar()=='p' && actaJuicio.getPruebaSeleccionada()=="Arma"&&numeroTextoActual==1){
+                    System.out.println("asd");
+                }
+
                 if (e.getKeyChar()=='A' || e.getKeyChar()=='a'){
                     new Thread(() -> {
                         actaJuicio.setVisible(true);

@@ -23,6 +23,7 @@ public class UI {
         nombrePersonajeTextArea.setForeground(colorBlanco);
         nombrePersonajeTextArea.setFont(aceAttorneyFont);
 
+
         //Setting de la imagen de la textbox
         textBoxLabel.setBounds(0,-200,1000,960);
         ImageIcon textBoxIcon = new ImageIcon("Sprites/textbox/textboximage.png");
@@ -34,13 +35,15 @@ public class UI {
         nombrePersonajeTextArea.setText(nombre);
     }
 
+    public JLabel getTextBoxLabel(){
+
+        return textBoxLabel;
+    }
+
     public JTextArea getNombrePersonajeTextArea(){
 
         return nombrePersonajeTextArea;
     }
 
-    public JLabel getTextBoxLabel(){
 
-        return textBoxLabel;
-    }
 }

@@ -25,11 +25,17 @@ public class TextoEscenario1 {
         arrayTexto.add("La defensa esta lista.");
 
         //5
-        arrayTexto.add("La fiscalia esta lista, su senoria.");
+        arrayTexto.add("Bien, empezaremos con un breve resumen del caso, abogado defensor, podria darnos un resumen del escenario del crimen?");
 
         //6
-        arrayTexto.add("Se abre la sesion en el juicio del Sr. Ama Quiller.");
-
+        arrayTexto.add("En el tribunal lo mas importante es poder respaldar tus alegatos con pruebas solidas, para objetar a la fiscalia tendras tambien que presentar" +
+                "pruebas y demostrar su error.");
+        //7
+        arrayTexto.add("Las pruebas se te iran dando durante el transcurso del juicio, puedes " +
+                "verlas en todo momento pulsando la tecla A.");
+        //8
+        arrayTexto.add("El juez te ha pedido un breve resumen del caso, pulsa la tecla A y haz click derecho sobre escena del crimen para seleccionarla, entonces pulsa" +
+                " P para presentarla en el dialogo correcto.");
     }
 
     public int getTamañoArray(){
