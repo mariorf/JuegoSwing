@@ -4,6 +4,10 @@ import java.awt.event.*;
 
 public class ActaJuicio extends JFrame {
 
+    //BOOLEANS DE ARMAS SELECCIONADAS
+
+    boolean escenaCrimenSeleccionada = false;
+    boolean armaSeleccionada = false;
 
     String pruebaSeleccionada = "Vacio";
 
@@ -139,7 +143,6 @@ public class ActaJuicio extends JFrame {
         contentPane.add(labelEscenaCrimen);
         contentPane.add(nombrePruebaField);
     }
-
 
     String getPruebaSeleccionada(){
         return pruebaSeleccionada;

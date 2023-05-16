@@ -159,6 +159,14 @@ public class Escenario1 extends JFrame {
                             actaJuicio.labelEscenaCrimen.setVisible(true);
                             ui.setNombrePersonaje("Juez");
 
+                            if(actaJuicio.armaSeleccionada!=true){
+                                return;
+                            }
+
+                            if(actaJuicio.armaSeleccionada==true){
+                                System.out.println("asdasdasd");
+                            }
+
                         }
 
                         //CREAR EL GESTOR EVENTOS EN BASE A la UI
@@ -174,7 +182,14 @@ public class Escenario1 extends JFrame {
                     }
                 }
 
+                if (e.getKeyChar()=='p'||e.getKeyChar()=='P'){
 
+                    if(actaJuicio.pruebaSeleccionada.equals("Arma")){
+
+                        actaJuicio.armaSeleccionada=true;
+                        actaJuicio.escenaCrimenSeleccionada=false;
+                    }
+                }
 
                 if (e.getKeyChar()=='A' || e.getKeyChar()=='a'){
                     new Thread(() -> {
