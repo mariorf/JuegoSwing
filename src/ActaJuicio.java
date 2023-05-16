@@ -72,12 +72,20 @@ public class ActaJuicio extends JFrame {
             public void mouseClicked(MouseEvent e) {
 
                //Crea una nueva ventana con la prueba y una descripción
-                pruebaAmpliada.setVisible(true);
-                pruebaAmpliada.setPruebaAmpliada("ActaJuicio/escenarioCrimen.jpg", "Escena crimen", "El cadaver se encontro cerca del acusado, muerto de un disparo a la cabeza por detras. El acusado " +
-                        "estaba esposado a la pata de la cama y tenia en su bolsillo" +
-                        " las llaves de la victima, en el dibujo de la escena se muestran en el piso, aunque se encontraron en su bolsillo. El arma se encontraba en las manos del acusado con una bala disparada" +
-                        " cuando se le detuvo. El arma homicida pertenecia a la victima. \n\n" +
-                        "Se encontro sangre en la mesa, en la pared de enfrente de la mesa y brotando de la cabeza de la victima");
+                if(SwingUtilities.isLeftMouseButton(e)) {
+                    pruebaAmpliada.setVisible(true);
+                    pruebaAmpliada.setPruebaAmpliada("ActaJuicio/escenarioCrimen.jpg", "Escena crimen", "El cadaver se encontro cerca del acusado, muerto de un disparo a la cabeza por detras. El acusado " +
+                            "estaba esposado a la pata de la cama y se econtraba atontado, tenia en su bolsillo" +
+                            " las llaves de la victima, en el dibujo de la escena se muestran en el piso, aunque se encontraron en su bolsillo. El arma se encontraba en las manos del acusado con una bala disparada" +
+                            " cuando se le detuvo. El arma homicida pertenecia a la victima. \n\n" +
+                            "Se encontro sangre en la mesa, en la pared de enfrente de la mesa y brotando de la cabeza de la victima");
+                }
+
+                if(SwingUtilities.isRightMouseButton(e)){
+                    pruebaSeleccionada="EscenaCrimen";
+                    System.out.println(pruebaSeleccionada);
+                }
+
             }
             @Override
             public void mousePressed(MouseEvent e) {

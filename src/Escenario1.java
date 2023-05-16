@@ -40,7 +40,6 @@ public class Escenario1 extends JFrame {
         UI ui = new UI();
         SaveManager saveManager = new SaveManager();
 
-        //Borrar¿?
 
 
 
@@ -168,10 +167,25 @@ public class Escenario1 extends JFrame {
                             }
 
                         }
+                        if(numeroTextoActual==10){
+
+                            ui.setNombrePersonaje("Defensa");
+                            spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetLlorando());
+                            spriteDisplayJuez.setSpriteImage(null);
+                            spriteDisplayFiscalia.setSpriteImage(null);
+                            background.setBackground(background.backgroundStandTestigo());
+                        }
+
+                        if(numeroTextoActual>10 && numeroTextoActual<=14){
+
+                            ui.setNombrePersonaje("Miles E.");
+                            spriteDisplayTestigos.setSpriteImage(null);
+                            spriteDisplayJuez.setSpriteImage(null);
+                            spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetPensando());
+                            background.setBackground(background.backgroundStandFiscalia());
+                        }
 
                         //CREAR EL GESTOR EVENTOS EN BASE A la UI
-
-
                         //Guardado, escribe en un documento de texto externo la linea actual en la que te encuentras
                         try {
                             saveManager.guardar(numeroTextoActual);
@@ -184,8 +198,11 @@ public class Escenario1 extends JFrame {
 
                 if (e.getKeyChar()=='p'||e.getKeyChar()=='P'){
 
+                    if(actaJuicio.pruebaSeleccionada.equals("EscenaCrimen")){
+                        actaJuicio.armaSeleccionada=false;
+                        actaJuicio.escenaCrimenSeleccionada=true;
+                    }
                     if(actaJuicio.pruebaSeleccionada.equals("Arma")){
-
                         actaJuicio.armaSeleccionada=true;
                         actaJuicio.escenaCrimenSeleccionada=false;
                     }

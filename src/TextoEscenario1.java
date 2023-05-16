@@ -35,12 +35,28 @@ public class TextoEscenario1 {
                 "verlas en todo momento pulsando la tecla A. ");
         //8
         arrayTexto.add("El juez te ha pedido el arma homicida, pulsa la tecla A y haz click derecho sobre el arma para seleccionarla, entonces pulsa" +
-                " P para presentarla en el dialogo correcto.");
+                " P para presentarla en el siguiente dialogo y pulsa Z dos veces.");
         //9
         arrayTexto.add("Y bien, defensa?");
 
         //10
-        arrayTexto.add("asdasdasd");
+        arrayTexto.add("La supuesta arma homicida es la pistola de la victima, se encontro disparada en la mano del acusado.");
+
+        //11
+        arrayTexto.add("Asi es, la teoria de la fiscalia es que el acusado fue a robar en la habitacion del Sheriff, pero se encontro que aun estaba" +
+                " alli, asi que como Sheriff que es");
+        //12
+        arrayTexto.add(" fue a detenerlo. Pero el Sheriff debio de haber dejado el arma cerca del acusado, asi que mientras la victima escribia su reporte" +
+                " le disparo a traicion por detras");
+
+        //13
+        arrayTexto.add("Poco despues, plenamente consciente de lo que habia hecho y aun esposado, acerco el cadaver y busco sus llaves para intentar liberarse," +
+                " pero, ninguna de las llaves funciono.");
+
+        //14
+        arrayTexto.add("(Estoy seguro de que hay una contradiccion en lo que acaba de decir el fiscal, deberia revisar la descripcion de las pruebas en el acta" +
+                "del juicio...)");
+
     }
 
     public int getTamañoArray(){
