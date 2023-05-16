@@ -105,6 +105,8 @@ public class Escenario1 extends JFrame {
                         //ESTA LINEA PONE EL DIALOGO DESPUES DE QUE EL CONTADOR SUME 1
                         campoTextoEsc1.setText(textoEscenario1.arrayTexto.get(numeroTextoActual));
 
+
+                        //TODOS LOS CAMBIOS DE SPRITES Y LA MECANICA DE PRUEBAS
                         if(numeroTextoActual == 0){
 
                             background.setBackground(background.backgroundCortePanoramica());
@@ -184,7 +186,7 @@ public class Escenario1 extends JFrame {
                             spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetPensando());
                             background.setBackground(background.backgroundStandFiscalia());
 
-                            if(numeroTextoActual==13&& actaJuicio.escenaCrimenSeleccionada==true){
+                            if(numeroTextoActual==13&&actaJuicio.escenaCrimenSeleccionada==true){
                                 numeroTextoActual=15;
                                 return;
                             }
@@ -217,6 +219,26 @@ public class Escenario1 extends JFrame {
                             spriteDisplayFiscalia.setSpriteImage(null);
                             background.setBackground(background.backgroundStandTestigo());
                         }
+                        if(numeroTextoActual>=19){
+
+                            ui.setNombrePersonaje("Miles E.");
+                            spriteDisplayTestigos.setSpriteImage(null);
+                            spriteDisplayJuez.setSpriteImage(null);
+                            spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetSorprendido());
+                            background.setBackground(background.backgroundStandFiscalia());
+                        }
+                        if(numeroTextoActual>19){
+
+                            ui.setNombrePersonaje("Miles E.");
+                            spriteDisplayTestigos.setSpriteImage(null);
+                            spriteDisplayJuez.setSpriteImage(null);
+                            spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetCondescendiente());
+                            background.setBackground(background.backgroundStandFiscalia());
+                        }
+
+
+
+
 
                         //CREAR EL GESTOR EVENTOS EN BASE A la UI
                         //Guardado, escribe en un documento de texto externo la linea actual en la que te encuentras

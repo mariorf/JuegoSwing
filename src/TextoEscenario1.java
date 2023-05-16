@@ -63,10 +63,20 @@ public class TextoEscenario1 {
         arrayTexto.add("Contradice las pruebas? Podria explicarnos a que se refiere?");
 
         //17
-        arrayTexto.add("Claro que si. Segun su relato el acusado deberia haber estado plenamente consciente para arrastrar el cuerpo.");
+        arrayTexto.add("Segun su relato el acusado deberia haber estado plenamente consciente para arrastrar el cuerpo.");
 
         //18
         arrayTexto.add("Pero acorde al reporte policial de la escena del crimen el acusado se encontraba atontado, como recien despertado.");
+
+        //19
+        arrayTexto.add("...");
+
+        //20
+        arrayTexto.add("No hay forma de demostrar si estaba o no fingiendolo, no tienes pruebas para demostrar si estaba o no consciente realmente, lo que si" +
+                "es un hecho es que el arma se econtro");
+
+        //21
+        arrayTexto.add(" en sus manos, con una bala disparada eso junto con la causa de muerte de la victima solo nos deja una opcion.\n El asesino es el Sr. Ama");
     }
 
     public int getTamañoArray(){
