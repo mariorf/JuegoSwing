@@ -57,8 +57,16 @@ public class TextoEscenario1 {
         arrayTexto.add("(Estoy seguro de que hay una contradiccion en lo que acaba de decir el fiscal, deberia revisar la descripcion de las pruebas en el acta" +
                 "del juicio...)");
         //15
-        arrayTexto.add("asdasdasd");
+        arrayTexto.add("La teoria de la fiscalia claramente contradice los hechos, su senoria.");
 
+        //16
+        arrayTexto.add("Contradice las pruebas? Podria explicarnos a que se refiere?");
+
+        //17
+        arrayTexto.add("Claro que si. Segun su relato el acusado deberia haber estado plenamente consciente para arrastrar el cuerpo.");
+
+        //18
+        arrayTexto.add("Pero acorde al reporte policial de la escena del crimen el acusado se encontraba atontado, como recien despertado.");
     }
 
     public int getTamañoArray(){

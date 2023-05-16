@@ -192,7 +192,30 @@ public class Escenario1 extends JFrame {
                                 numeroTextoActual=11;
                                 return;
                             }
+                        }
+                        if(numeroTextoActual==15){
 
+                            ui.setNombrePersonaje("Defensa");
+                            spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetLlorando());
+                            spriteDisplayJuez.setSpriteImage(null);
+                            spriteDisplayFiscalia.setSpriteImage(null);
+                            background.setBackground(background.backgroundStandTestigo());
+                        }
+                        if(numeroTextoActual==16){
+
+                            spriteDisplayTestigos.setSpriteImage(null);
+                            background.setBackground(background.backgroundStandJuez());
+                            spriteDisplayJuez.setSpriteImage(juezSprites.juezSetIdle());
+                            actaJuicio.labelEscenaCrimen.setVisible(true);
+                            ui.setNombrePersonaje("Juez");
+                        }
+                        if(numeroTextoActual>16 && numeroTextoActual<=18){
+
+                            ui.setNombrePersonaje("Defensa");
+                            spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetLlorando());
+                            spriteDisplayJuez.setSpriteImage(null);
+                            spriteDisplayFiscalia.setSpriteImage(null);
+                            background.setBackground(background.backgroundStandTestigo());
                         }
 
                         //CREAR EL GESTOR EVENTOS EN BASE A la UI

@@ -83,6 +83,7 @@ public class ActaJuicio extends JFrame {
                 if(SwingUtilities.isRightMouseButton(e)){
                     pruebaSeleccionada="EscenaCrimen";
                     System.out.println(pruebaSeleccionada);
+                    dispose();
                 }
 
             }
@@ -119,6 +120,7 @@ public class ActaJuicio extends JFrame {
                 if(SwingUtilities.isRightMouseButton(e)){
                     pruebaSeleccionada="Arma";
                     System.out.println(pruebaSeleccionada);
+                    dispose();
                 }
 
             }
