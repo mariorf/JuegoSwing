@@ -56,6 +56,8 @@ public class TextoEscenario1 {
         //14
         arrayTexto.add("(Estoy seguro de que hay una contradiccion en lo que acaba de decir el fiscal, deberia revisar la descripcion de las pruebas en el acta" +
                 "del juicio...)");
+        //15
+        arrayTexto.add("asdasdasd");
 
     }
 

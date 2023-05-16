@@ -4,8 +4,7 @@ import java.awt.event.*;
 
 public class ActaJuicio extends JFrame {
 
-    //BOOLEANS DE ARMAS SELECCIONADAS
-
+    //BOOLEANS DE PRUEBAS SELECCIONADAS
     boolean escenaCrimenSeleccionada = false;
     boolean armaSeleccionada = false;
 
@@ -167,7 +166,7 @@ class PruebaAmpliada extends JFrame{
     Font font1 = new Font("Ace Attorney", Font.PLAIN, 22);
 
     //Construye la imagen de la prueba que ya existe en miniatura, pero esta vez la hace mas grande y en otra ventana
-    void setPruebaAmpliada(String path, String nombrePrueba, String descripcion){
+    void setPruebaAmpliada(String path, String nombrePrueba, String descripcion) {
 
         ImageIcon imagenAmpliada = new ImageIcon(path);
         Container contentPane = new Container();
@@ -177,9 +176,9 @@ class PruebaAmpliada extends JFrame{
         descripcionPrueba.setFont(font1);
         descripcionPrueba.setOpaque(false);
 
-        contentPane=getContentPane();
+        contentPane = getContentPane();
         setTitle(nombrePrueba);
-        setSize(799,800);
+        setSize(799, 800);
         setLayout(null);
         setResizable(false);
         setLocationRelativeTo(null);
@@ -187,7 +186,7 @@ class PruebaAmpliada extends JFrame{
 
         //Tamaño y localización de la descripción
         descripcionPrueba.setSize(799, 211);
-        descripcionPrueba.setLocation(0,589);
+        descripcionPrueba.setLocation(0, 589);
 
         //Texto de la textBox
         descripcionPrueba.setEditable(false);
@@ -199,10 +198,13 @@ class PruebaAmpliada extends JFrame{
 
 
         labelImagen.setIcon(imagenAmpliada);
-        labelImagen.setSize(799,589);
+        labelImagen.setSize(799, 589);
 
 
         contentPane.add(descripcionPrueba);
         contentPane.add(labelImagen);
+    }
+    void borrarDescripcion(){
+
     }
 }

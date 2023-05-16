@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class Escenario1 extends JFrame {
 
-    boolean repetir = false;
+    boolean repetir = true;
 
     int numeroTextoActual=0;
 
@@ -163,7 +163,7 @@ public class Escenario1 extends JFrame {
                             }
 
                             if(actaJuicio.armaSeleccionada==true){
-                                System.out.println("asdasdasd");
+
                             }
 
                         }
@@ -183,6 +183,16 @@ public class Escenario1 extends JFrame {
                             spriteDisplayJuez.setSpriteImage(null);
                             spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetPensando());
                             background.setBackground(background.backgroundStandFiscalia());
+
+                            if(numeroTextoActual==13&& actaJuicio.escenaCrimenSeleccionada==true){
+                                numeroTextoActual=15;
+                                return;
+                            }
+                            if(numeroTextoActual==14&&e.getKeyChar()=='z'||e.getKeyChar()=='Z'){
+                                numeroTextoActual=11;
+                                return;
+                            }
+
                         }
 
                         //CREAR EL GESTOR EVENTOS EN BASE A la UI
