@@ -76,6 +76,8 @@ public class Escenario1 extends JFrame {
         setVisible(true);
 
 
+
+        //CREAR CLASE GESTOR EVENTOS(constructor con todas  las clases que necesite)
         //Eventos
         botonPasarTexto.addKeyListener(new KeyListener() {
 

@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class CampoTexto{
 
-    JTextArea areaTexto = new JTextArea("Pulsa Z para empezar el juego");
+    JTextArea areaTexto = new JTextArea("Pulsa Z para pasar el texto.");
 
     JTextArea nombrePersonajeTexto = new JTextArea();
     Font font1 = new Font("Ace Attorney", Font.PLAIN, 50);
