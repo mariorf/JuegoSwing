@@ -255,38 +255,7 @@ public class Escenario1 extends JFrame {
                         actaJuicio.armaSeleccionada=false;
                         actaJuicio.escenaCrimenSeleccionada=true;
                         ui.setImagenPrueba("ActaJuicio/escenarioCrimenMiniatura.jpg");
-                        ui.getLabelUiPruebaSeleccionada().addMouseListener(new MouseListener() {
-                            @Override
-                            public void mouseClicked(MouseEvent e) {
 
-                                if(numeroTextoActual==14&&actaJuicio.escenaCrimenSeleccionada==true){
-
-                                    System.out.println("asdasd");
-                                }
-                            }
-
-                            @Override
-                            public void mousePressed(MouseEvent e) {
-
-                            }
-
-                            @Override
-                            public void mouseReleased(MouseEvent e) {
-
-                            }
-
-                            @Override
-                            public void mouseEntered(MouseEvent e) {
-
-                            }
-
-                            @Override
-                            public void mouseExited(MouseEvent e) {
-
-                            }
-
-                        }
-                        );
                     }
 
 
@@ -314,5 +283,31 @@ public class Escenario1 extends JFrame {
 
             }
         });
+
+        ui.getLabelUiPruebaSeleccionada().addMouseListener(new MouseListener() {
+                                                               @Override
+                                                               public void mouseClicked(MouseEvent e) {
+
+                                                                   if(numeroTextoActual==14&&actaJuicio.escenaCrimenSeleccionada==true){
+
+                                                                       System.out.println("asdasd");
+                                                                   }
+                                                               }
+                                                               @Override
+                                                               public void mousePressed(MouseEvent e) {
+                                                               }
+                                                               @Override
+                                                               public void mouseReleased(MouseEvent e) {
+                                                               }
+                                                               @Override
+                                                               public void mouseEntered(MouseEvent e) {
+                                                               }
+                                                               @Override
+                                                               public void mouseExited(MouseEvent e) {
+                                                               }
+
+        }
+        );
+
     }
 }
