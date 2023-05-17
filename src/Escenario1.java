@@ -40,7 +40,6 @@ public class Escenario1 extends JFrame {
         SaveManager saveManager = new SaveManager();
         Robot robot = new Robot();
 
-
         //Poner los valores necesarios para la ventana
         contentPane = getLayeredPane();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -95,6 +94,8 @@ public class Escenario1 extends JFrame {
 
                 //Para pasar las lineas de dialogo
                 if (e.getKeyChar() == 'z' || e.getKeyChar() == 'Z') {
+
+
 
                     if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
 
