@@ -8,11 +8,16 @@ public class ActaJuicio extends JFrame {
     boolean escenaCrimenSeleccionada = false;
     boolean armaSeleccionada = false;
 
+
+    static JTextArea descripcionPrueba = new JTextArea();
+
     String pruebaSeleccionada = "Vacio";
 
     Container contentPane = new Container();
 
     PruebaAmpliada pruebaAmpliada = new PruebaAmpliada();
+
+
 
     //Imagenes tamaño normal de las pruebas
     JLabel labelEscenaCrimen = new JLabel();
@@ -22,6 +27,8 @@ public class ActaJuicio extends JFrame {
     JButton botonPresentar = new JButton();
 
     JTextArea nombrePruebaField = new JTextArea();
+
+
 
 
     //Imagenes en miniatura de las pruebas
@@ -183,11 +190,9 @@ class PruebaAmpliada extends JFrame{
 
         ImageIcon imagenAmpliada = new ImageIcon(path);
         Container contentPane = new Container();
-        JTextArea descripcionPrueba = new JTextArea();
 
-
-        descripcionPrueba.setFont(font1);
-        descripcionPrueba.setOpaque(false);
+        ActaJuicio.descripcionPrueba.setFont(font1);
+        ActaJuicio.descripcionPrueba.setOpaque(false);
 
         contentPane = getContentPane();
         setTitle(nombrePrueba);
@@ -198,23 +203,22 @@ class PruebaAmpliada extends JFrame{
 
 
         //Tamaño y localización de la descripción
-        descripcionPrueba.setSize(799, 211);
-        descripcionPrueba.setLocation(0, 589);
+        ActaJuicio.descripcionPrueba.setSize(799, 211);
+        ActaJuicio.descripcionPrueba.setLocation(0, 589);
 
         //Texto de la textBox
-        descripcionPrueba.setEditable(false);
-        descripcionPrueba.setText(descripcion);
+        ActaJuicio.descripcionPrueba.setEditable(false);
+        ActaJuicio.descripcionPrueba.setText(descripcion);
 
         //Para que el texto no se salga de los limites
-        descripcionPrueba.setLineWrap(true);
-        descripcionPrueba.setWrapStyleWord(true);
+        ActaJuicio.descripcionPrueba.setLineWrap(true);
+        ActaJuicio.descripcionPrueba.setWrapStyleWord(true);
 
 
         labelImagen.setIcon(imagenAmpliada);
         labelImagen.setSize(799, 589);
 
-
-        contentPane.add(descripcionPrueba);
+        contentPane.add(ActaJuicio.descripcionPrueba);
         contentPane.add(labelImagen);
     }
 }
