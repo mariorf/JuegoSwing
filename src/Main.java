@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.io.IOException;
 
 class Main {
@@ -10,6 +11,8 @@ class Main {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             } catch (IOException e) {
+                throw new RuntimeException(e);
+            } catch (AWTException e) {
                 throw new RuntimeException(e);
             }
         }).start();

@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
@@ -17,7 +18,7 @@ public class Escenario1 extends JFrame {
     JTextArea campoTextoEsc1 = new JTextArea();
 
 
-    public Escenario1() throws InterruptedException, IOException {
+    public Escenario1() throws InterruptedException, IOException, AWTException {
 
         //Creacion de los objetos para llamar a los sprites de los personajes
         AmaQuillerSprites amaQuillerSprites = new AmaQuillerSprites();
@@ -33,10 +34,11 @@ public class Escenario1 extends JFrame {
         SpriteDisplayTestigos spriteDisplayTestigos = new SpriteDisplayTestigos();
         SpriteDisplayJuez spriteDisplayJuez = new SpriteDisplayJuez();
         SpriteDisplayFiscalia spriteDisplayFiscalia = new SpriteDisplayFiscalia();
-        ActaJuicio actaJuicio = new ActaJuicio();
-        Background background = new Background();
         UI ui = new UI();
+        ActaJuicio actaJuicio = new ActaJuicio(ui);
+        Background background = new Background();
         SaveManager saveManager = new SaveManager();
+        Robot robot = new Robot();
 
 
         //Poner los valores necesarios para la ventana
@@ -153,12 +155,9 @@ public class Escenario1 extends JFrame {
                             actaJuicio.labelEscenaCrimen.setVisible(true);
                             ui.setNombrePersonaje("Juez");
 
-                            if (actaJuicio.armaSeleccionada != true) {
+                            if (numeroTextoActual == 9 && e.getKeyChar() == 'z' || e.getKeyChar() == 'Z') {
+                                numeroTextoActual = 9;
                                 return;
-                            }
-
-                            if (actaJuicio.armaSeleccionada == true) {
-
                             }
 
                         }
@@ -238,24 +237,6 @@ public class Escenario1 extends JFrame {
                     }
                 }
 
-                if (e.getKeyChar() == 'p' || e.getKeyChar() == 'P') {
-
-                    if (actaJuicio.pruebaSeleccionada.equals("EscenaCrimen")) {
-
-                        actaJuicio.armaSeleccionada = false;
-                        actaJuicio.escenaCrimenSeleccionada = true;
-                        ui.setImagenPrueba("ActaJuicio/escenarioCrimenMiniatura.jpg");
-
-                    }
-
-                    if (actaJuicio.pruebaSeleccionada.equals("Arma")) {
-
-                        ui.setImagenPrueba("ActaJuicio/armaMiniatura.png");
-                        actaJuicio.armaSeleccionada = true;
-                        actaJuicio.escenaCrimenSeleccionada = false;
-                    }
-                }
-
                 if (e.getKeyChar() == 'A' || e.getKeyChar() == 'a') {
                     new Thread(() -> {
                         actaJuicio.setVisible(true);
@@ -279,9 +260,18 @@ public class Escenario1 extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
 
+                if(numeroTextoActual == 9 && actaJuicio.armaSeleccionada==true){
+
+                    numeroTextoActual = 10;
+                    robot.keyPress(KeyEvent.VK_Z);
+                    robot.keyRelease(KeyEvent.VK_Z);
+                }
+
                 if (numeroTextoActual == 14 && actaJuicio.escenaCrimenSeleccionada == true) {
 
                     numeroTextoActual = 15;
+                    robot.keyPress(KeyEvent.VK_Z);
+                    robot.keyRelease(KeyEvent.VK_Z);
                 }
             }
 

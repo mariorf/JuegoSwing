@@ -34,8 +34,9 @@ public class TextoEscenario1 {
         arrayTexto.add("Las pruebas se te iran dando durante el transcurso del juicio, puedes " +
                 "verlas en todo momento pulsando la tecla A. ");
         //8
-        arrayTexto.add("El juez te ha pedido el arma homicida, pulsa la tecla A y haz click derecho sobre el arma para seleccionarla, entonces pulsa" +
-                " P para presentarla en el siguiente dialogo y pulsa Z dos veces.");
+        arrayTexto.add("El juez te ha pedido el arma homicida, pulsa la tecla A y haz click derecho sobre el arma para seleccionarla, luego hazle click a la imagen para presentarla" +
+                "cuando creas conveniente.");
+
         //9
         arrayTexto.add("Y bien, defensa?");
 

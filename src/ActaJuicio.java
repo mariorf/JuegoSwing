@@ -36,8 +36,9 @@ public class ActaJuicio extends JFrame {
 
     Color colorVerde = new Color(66, 255, 17);
 
+    UI ui = new UI();
 
-    public ActaJuicio(){
+    public ActaJuicio(UI uiJuicio){
 
         contentPane=getContentPane();
         setTitle("Acta del juicio");
@@ -82,7 +83,11 @@ public class ActaJuicio extends JFrame {
                 }
 
                 if(SwingUtilities.isRightMouseButton(e)){
+
+                    armaSeleccionada = false;
+                    escenaCrimenSeleccionada = true;
                     pruebaSeleccionada="EscenaCrimen";
+                    uiJuicio.setImagenPrueba("ActaJuicio/escenarioCrimenMiniatura.jpg");
                     System.out.println(pruebaSeleccionada);
                     dispose();
                 }
@@ -120,7 +125,11 @@ public class ActaJuicio extends JFrame {
 
                 if(SwingUtilities.isRightMouseButton(e)){
 
+                    armaSeleccionada = true;
+                    escenaCrimenSeleccionada = false;
+
                     pruebaSeleccionada="Arma";
+                    uiJuicio.setImagenPrueba("ActaJuicio/armaMiniatura.png");
                     System.out.println(pruebaSeleccionada);
                     dispose();
                 }
