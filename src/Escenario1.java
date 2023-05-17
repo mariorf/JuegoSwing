@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -9,7 +11,7 @@ import java.io.IOException;
 
 public class Escenario1 extends JFrame {
 
-    boolean repetir = true;
+    boolean repetir = false;
 
     int numeroTextoActual=0;
 
@@ -31,7 +33,6 @@ public class Escenario1 extends JFrame {
         CampoTexto campoTexto = new CampoTexto();
         TextoEscenario1 textoEscenario1 = new TextoEscenario1();
         JButton botonPasarTexto = new JButton();
-        Font font1 = new Font("Carnevalee Freakshow", Font.PLAIN, 20);
         SpriteDisplayTestigos spriteDisplayTestigos = new SpriteDisplayTestigos();
         SpriteDisplayJuez spriteDisplayJuez = new SpriteDisplayJuez();
         SpriteDisplayFiscalia spriteDisplayFiscalia = new SpriteDisplayFiscalia();
@@ -68,6 +69,7 @@ public class Escenario1 extends JFrame {
         //EL ORDEN DE ESTO ES BASICAMENTE EL ORDEN DE LAS CAPAS
         contentPane.setLayout(null);
         contentPane.add(campoTextoEsc1);
+        contentPane.add(ui.getLabelUiPruebaSeleccionada());
         contentPane.add(ui.getNombrePersonajeTextArea());
         contentPane.add(ui.getTextBoxLabel());
         contentPane.add(botonPasarTexto);
@@ -98,8 +100,6 @@ public class Escenario1 extends JFrame {
                 if (e.getKeyChar()=='z' || e.getKeyChar()=='Z') {
 
                     if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
-
-
 
 
                         //ESTA LINEA PONE EL DIALOGO DESPUES DE QUE EL CONTADOR SUME 1
@@ -186,10 +186,7 @@ public class Escenario1 extends JFrame {
                             spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetPensando());
                             background.setBackground(background.backgroundStandFiscalia());
 
-                            if(numeroTextoActual==13&&actaJuicio.escenaCrimenSeleccionada==true){
-                                numeroTextoActual=15;
-                                return;
-                            }
+
                             if(numeroTextoActual==14&&e.getKeyChar()=='z'||e.getKeyChar()=='Z'){
                                 numeroTextoActual=11;
                                 return;
@@ -254,10 +251,48 @@ public class Escenario1 extends JFrame {
                 if (e.getKeyChar()=='p'||e.getKeyChar()=='P'){
 
                     if(actaJuicio.pruebaSeleccionada.equals("EscenaCrimen")){
+
                         actaJuicio.armaSeleccionada=false;
                         actaJuicio.escenaCrimenSeleccionada=true;
+                        ui.setImagenPrueba("ActaJuicio/escenarioCrimenMiniatura.jpg");
+                        ui.getLabelUiPruebaSeleccionada().addMouseListener(new MouseListener() {
+                            @Override
+                            public void mouseClicked(MouseEvent e) {
+
+                                if(numeroTextoActual==14&&actaJuicio.escenaCrimenSeleccionada==true){
+
+                                    System.out.println("asdasd");
+                                }
+                            }
+
+                            @Override
+                            public void mousePressed(MouseEvent e) {
+
+                            }
+
+                            @Override
+                            public void mouseReleased(MouseEvent e) {
+
+                            }
+
+                            @Override
+                            public void mouseEntered(MouseEvent e) {
+
+                            }
+
+                            @Override
+                            public void mouseExited(MouseEvent e) {
+
+                            }
+
+                        }
+                        );
                     }
+
+
                     if(actaJuicio.pruebaSeleccionada.equals("Arma")){
+
+                        ui.setImagenPrueba("ActaJuicio/armaMiniatura.png");
                         actaJuicio.armaSeleccionada=true;
                         actaJuicio.escenaCrimenSeleccionada=false;
                     }

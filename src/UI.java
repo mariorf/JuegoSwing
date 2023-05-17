@@ -5,6 +5,8 @@ public class UI {
 
     private JLabel textBoxLabel = new JLabel();
 
+    private JLabel labelUiPruebaSeleccionada = new JLabel();
+
     private JTextArea nombrePersonajeTextArea = new JTextArea();
 
     Color colorBlanco = new Color(255, 255, 255);
@@ -24,15 +26,32 @@ public class UI {
         nombrePersonajeTextArea.setFont(aceAttorneyFont);
 
 
+        //Setting de la imagen de la prueba
+        ImageIcon textBoxIcon = new ImageIcon("Sprites/textbox/textboximage.png");
+        labelUiPruebaSeleccionada.setIcon(textBoxIcon);
+        labelUiPruebaSeleccionada.setBounds(10,10,100,100);
+
+
         //Setting de la imagen de la textbox
         textBoxLabel.setBounds(0,-200,1000,960);
-        ImageIcon textBoxIcon = new ImageIcon("Sprites/textbox/textboximage.png");
         textBoxLabel.setIcon(textBoxIcon);
+    }
+
+
+    public void setImagenPrueba(String path){
+
+        ImageIcon imageIcon = new ImageIcon(path);
+        labelUiPruebaSeleccionada.setIcon(imageIcon);
     }
 
     public void setNombrePersonaje(String nombre){
 
         nombrePersonajeTextArea.setText(nombre);
+    }
+
+    public JLabel getLabelUiPruebaSeleccionada(){
+
+        return labelUiPruebaSeleccionada;
     }
 
     public JLabel getTextBoxLabel(){

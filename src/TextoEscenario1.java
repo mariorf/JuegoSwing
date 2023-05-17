@@ -50,20 +50,20 @@ public class TextoEscenario1 {
                 " le disparo a traicion por detras");
 
         //13
-        arrayTexto.add("Poco despues, plenamente consciente de lo que habia hecho y aun esposado, acerco el cadaver y busco sus llaves para intentar liberarse," +
-                " pero, ninguna de las llaves funciono.");
+        arrayTexto.add("Poco despues, plenamente consciente de lo que habia hecho y aun esposado, acerco el cadaver y busco sus llaves para liberarse," +
+                " pero las llaves que cogio eran las de su casa, no de las esposas");
 
         //14
-        arrayTexto.add("(Estoy seguro de que hay una contradiccion en lo que acaba de decir el fiscal, deberia revisar la descripcion de las pruebas en el acta" +
+        arrayTexto.add("(Estoy seguro de que hay una contradiccion en lo que acaba de decir... Deberia revisar la descripcion de las pruebas en el acta " +
                 "del juicio...)");
         //15
         arrayTexto.add("La teoria de la fiscalia claramente contradice los hechos, su senoria.");
 
         //16
-        arrayTexto.add("Contradice las pruebas? Podria explicarnos a que se refiere?");
+        arrayTexto.add("Contradice los hechos? Podria explicarnos a que se refiere?");
 
         //17
-        arrayTexto.add("Segun su relato el acusado deberia haber estado plenamente consciente para arrastrar el cuerpo.");
+        arrayTexto.add("Segun su relato el acusado deberia haber estado plenamente consciente para arrastrar el cuerpo y coger las llaves.");
 
         //18
         arrayTexto.add("Pero acorde al reporte policial de la escena del crimen el acusado se encontraba atontado, como recien despertado.");
