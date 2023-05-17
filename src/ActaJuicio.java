@@ -119,6 +119,7 @@ public class ActaJuicio extends JFrame {
                 }
 
                 if(SwingUtilities.isRightMouseButton(e)){
+
                     pruebaSeleccionada="Arma";
                     System.out.println(pruebaSeleccionada);
                     dispose();
@@ -206,8 +207,5 @@ class PruebaAmpliada extends JFrame{
 
         contentPane.add(descripcionPrueba);
         contentPane.add(labelImagen);
-    }
-    void borrarDescripcion(){
-
     }
 }

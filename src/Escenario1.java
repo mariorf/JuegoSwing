@@ -1,19 +1,16 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
 
 public class Escenario1 extends JFrame {
 
     boolean repetir = false;
 
-    int numeroTextoActual=0;
+    int numeroTextoActual = 0;
 
     JLayeredPane contentPane = new JLayeredPane();
 
@@ -42,14 +39,11 @@ public class Escenario1 extends JFrame {
         SaveManager saveManager = new SaveManager();
 
 
-
-
-
         //Poner los valores necesarios para la ventana
         contentPane = getLayeredPane();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
-        setSize(1000,800);
+        setSize(1000, 800);
         setLocationRelativeTo(null);
         ui.setUI();
 
@@ -59,7 +53,7 @@ public class Escenario1 extends JFrame {
         //Cargado, coge la linea en la que te encontrabas segun el guardado anterior y la carga de nuevo
         //Tambien carga las pruebas si cumples las condiciones necesarias
         try {
-            numeroTextoActual= saveManager.cargar();
+            numeroTextoActual = saveManager.cargar();
         } catch (FileNotFoundException ex) {
             throw new RuntimeException(ex);
         }
@@ -80,7 +74,6 @@ public class Escenario1 extends JFrame {
         setVisible(true);
 
 
-
         //Eventos
         botonPasarTexto.addKeyListener(new KeyListener() {
 
@@ -89,15 +82,15 @@ public class Escenario1 extends JFrame {
                 System.out.println(numeroTextoActual);
 
                 //PONER PRUEBAS SEGUN POSICION EN DIALOGO
-                if(numeroTextoActual>0){
+                if (numeroTextoActual > 0) {
                     actaJuicio.labelEscenaCrimen.setVisible(true);
                 }
-                if(numeroTextoActual>=8){
+                if (numeroTextoActual >= 8) {
                     actaJuicio.labelArma.setVisible(true);
                 }
 
                 //Para pasar las lineas de dialogo
-                if (e.getKeyChar()=='z' || e.getKeyChar()=='Z') {
+                if (e.getKeyChar() == 'z' || e.getKeyChar() == 'Z') {
 
                     if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
 
@@ -107,12 +100,12 @@ public class Escenario1 extends JFrame {
 
 
                         //TODOS LOS CAMBIOS DE SPRITES Y LA MECANICA DE PRUEBAS
-                        if(numeroTextoActual == 0){
+                        if (numeroTextoActual == 0) {
 
                             background.setBackground(background.backgroundCortePanoramica());
 
                         }
-                        if(numeroTextoActual == 2){
+                        if (numeroTextoActual == 2) {
 
                             spriteDisplayTestigos.setSpriteImage(null);
                             background.setBackground(background.backgroundStandJuez());
@@ -120,7 +113,7 @@ public class Escenario1 extends JFrame {
                             actaJuicio.labelEscenaCrimen.setVisible(true);
                             ui.setNombrePersonaje("Juez");
                         }
-                        if(numeroTextoActual==3){
+                        if (numeroTextoActual == 3) {
 
                             ui.setNombrePersonaje("Miles E.");
                             spriteDisplayTestigos.setSpriteImage(null);
@@ -128,7 +121,7 @@ public class Escenario1 extends JFrame {
                             spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetIdle());
                             background.setBackground(background.backgroundStandFiscalia());
                         }
-                        if(numeroTextoActual==4){
+                        if (numeroTextoActual == 4) {
 
                             ui.setNombrePersonaje("Defensa");
                             spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetLlorando());
@@ -136,7 +129,7 @@ public class Escenario1 extends JFrame {
                             spriteDisplayFiscalia.setSpriteImage(null);
                             background.setBackground(background.backgroundStandTestigo());
                         }
-                        if(numeroTextoActual==5){
+                        if (numeroTextoActual == 5) {
 
                             spriteDisplayTestigos.setSpriteImage(null);
                             background.setBackground(background.backgroundStandJuez());
@@ -144,7 +137,7 @@ public class Escenario1 extends JFrame {
                             actaJuicio.labelEscenaCrimen.setVisible(true);
                             ui.setNombrePersonaje("Juez");
                         }
-                        if(numeroTextoActual>6 && numeroTextoActual<8){
+                        if (numeroTextoActual > 6 && numeroTextoActual < 8) {
 
                             ui.setNombrePersonaje("Tutorial");
                             spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetIdle());
@@ -152,7 +145,7 @@ public class Escenario1 extends JFrame {
                             spriteDisplayFiscalia.setSpriteImage(null);
                             background.setBackground(background.backgroundStandTestigo());
                         }
-                        if(numeroTextoActual==9){
+                        if (numeroTextoActual == 9) {
 
                             spriteDisplayTestigos.setSpriteImage(null);
                             background.setBackground(background.backgroundStandJuez());
@@ -160,16 +153,16 @@ public class Escenario1 extends JFrame {
                             actaJuicio.labelEscenaCrimen.setVisible(true);
                             ui.setNombrePersonaje("Juez");
 
-                            if(actaJuicio.armaSeleccionada!=true){
+                            if (actaJuicio.armaSeleccionada != true) {
                                 return;
                             }
 
-                            if(actaJuicio.armaSeleccionada==true){
+                            if (actaJuicio.armaSeleccionada == true) {
 
                             }
 
                         }
-                        if(numeroTextoActual==10){
+                        if (numeroTextoActual == 10) {
 
                             ui.setNombrePersonaje("Defensa");
                             spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetLlorando());
@@ -178,7 +171,7 @@ public class Escenario1 extends JFrame {
                             background.setBackground(background.backgroundStandTestigo());
                         }
 
-                        if(numeroTextoActual>10 && numeroTextoActual<=14){
+                        if (numeroTextoActual > 10 && numeroTextoActual <= 14) {
 
                             ui.setNombrePersonaje("Miles E.");
                             spriteDisplayTestigos.setSpriteImage(null);
@@ -187,12 +180,12 @@ public class Escenario1 extends JFrame {
                             background.setBackground(background.backgroundStandFiscalia());
 
 
-                            if(numeroTextoActual==14&&e.getKeyChar()=='z'||e.getKeyChar()=='Z'){
-                                numeroTextoActual=11;
+                            if (numeroTextoActual == 14 && e.getKeyChar() == 'z' || e.getKeyChar() == 'Z') {
+                                numeroTextoActual = 11;
                                 return;
                             }
                         }
-                        if(numeroTextoActual==15){
+                        if (numeroTextoActual == 15) {
 
                             ui.setNombrePersonaje("Defensa");
                             spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetLlorando());
@@ -200,7 +193,7 @@ public class Escenario1 extends JFrame {
                             spriteDisplayFiscalia.setSpriteImage(null);
                             background.setBackground(background.backgroundStandTestigo());
                         }
-                        if(numeroTextoActual==16){
+                        if (numeroTextoActual == 16) {
 
                             spriteDisplayTestigos.setSpriteImage(null);
                             background.setBackground(background.backgroundStandJuez());
@@ -208,7 +201,7 @@ public class Escenario1 extends JFrame {
                             actaJuicio.labelEscenaCrimen.setVisible(true);
                             ui.setNombrePersonaje("Juez");
                         }
-                        if(numeroTextoActual>16 && numeroTextoActual<=18){
+                        if (numeroTextoActual > 16 && numeroTextoActual <= 18) {
 
                             ui.setNombrePersonaje("Defensa");
                             spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetLlorando());
@@ -216,7 +209,7 @@ public class Escenario1 extends JFrame {
                             spriteDisplayFiscalia.setSpriteImage(null);
                             background.setBackground(background.backgroundStandTestigo());
                         }
-                        if(numeroTextoActual>=19){
+                        if (numeroTextoActual >= 19) {
 
                             ui.setNombrePersonaje("Miles E.");
                             spriteDisplayTestigos.setSpriteImage(null);
@@ -224,7 +217,7 @@ public class Escenario1 extends JFrame {
                             spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetSorprendido());
                             background.setBackground(background.backgroundStandFiscalia());
                         }
-                        if(numeroTextoActual>19){
+                        if (numeroTextoActual > 19) {
 
                             ui.setNombrePersonaje("Miles E.");
                             spriteDisplayTestigos.setSpriteImage(null);
@@ -232,9 +225,6 @@ public class Escenario1 extends JFrame {
                             spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetCondescendiente());
                             background.setBackground(background.backgroundStandFiscalia());
                         }
-
-
-
 
 
                         //CREAR EL GESTOR EVENTOS EN BASE A la UI
@@ -248,26 +238,25 @@ public class Escenario1 extends JFrame {
                     }
                 }
 
-                if (e.getKeyChar()=='p'||e.getKeyChar()=='P'){
+                if (e.getKeyChar() == 'p' || e.getKeyChar() == 'P') {
 
-                    if(actaJuicio.pruebaSeleccionada.equals("EscenaCrimen")){
+                    if (actaJuicio.pruebaSeleccionada.equals("EscenaCrimen")) {
 
-                        actaJuicio.armaSeleccionada=false;
-                        actaJuicio.escenaCrimenSeleccionada=true;
+                        actaJuicio.armaSeleccionada = false;
+                        actaJuicio.escenaCrimenSeleccionada = true;
                         ui.setImagenPrueba("ActaJuicio/escenarioCrimenMiniatura.jpg");
 
                     }
 
-
-                    if(actaJuicio.pruebaSeleccionada.equals("Arma")){
+                    if (actaJuicio.pruebaSeleccionada.equals("Arma")) {
 
                         ui.setImagenPrueba("ActaJuicio/armaMiniatura.png");
-                        actaJuicio.armaSeleccionada=true;
-                        actaJuicio.escenaCrimenSeleccionada=false;
+                        actaJuicio.armaSeleccionada = true;
+                        actaJuicio.escenaCrimenSeleccionada = false;
                     }
                 }
 
-                if (e.getKeyChar()=='A' || e.getKeyChar()=='a'){
+                if (e.getKeyChar() == 'A' || e.getKeyChar() == 'a') {
                     new Thread(() -> {
                         actaJuicio.setVisible(true);
                     }).start();
@@ -284,30 +273,34 @@ public class Escenario1 extends JFrame {
             }
         });
 
+
+        //LISTENER DE LOS CLICKS A LAS PRUEBAS SELECCIONADAS
         ui.getLabelUiPruebaSeleccionada().addMouseListener(new MouseListener() {
-                                                               @Override
-                                                               public void mouseClicked(MouseEvent e) {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
-                                                                   if(numeroTextoActual==14&&actaJuicio.escenaCrimenSeleccionada==true){
+                if (numeroTextoActual == 14 && actaJuicio.escenaCrimenSeleccionada == true) {
 
-                                                                       System.out.println("asdasd");
-                                                                   }
-                                                               }
-                                                               @Override
-                                                               public void mousePressed(MouseEvent e) {
-                                                               }
-                                                               @Override
-                                                               public void mouseReleased(MouseEvent e) {
-                                                               }
-                                                               @Override
-                                                               public void mouseEntered(MouseEvent e) {
-                                                               }
-                                                               @Override
-                                                               public void mouseExited(MouseEvent e) {
-                                                               }
+                    numeroTextoActual = 15;
+                }
+            }
 
-        }
-        );
+            @Override
+            public void mousePressed(MouseEvent e) {
+            }
 
+            @Override
+            public void mouseReleased(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+            }
+
+        });
     }
 }
