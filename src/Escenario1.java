@@ -39,6 +39,8 @@ public class Escenario1 extends JFrame {
         Background background = new Background();
         SaveManager saveManager = new SaveManager();
         Robot robot = new Robot();
+        GestorSprites gestorSprites = new GestorSprites(spriteDisplayFiscalia, spriteDisplayJuez, spriteDisplayTestigos, background, ui);
+
 
         //Poner los valores necesarios para la ventana
         contentPane = getLayeredPane();
@@ -51,6 +53,7 @@ public class Escenario1 extends JFrame {
         //Llamada a los metodos de las clases para asignar valores
         campoTextoEsc1 = campoTexto.getAreaTexto();
 
+
         //Cargado, coge la linea en la que te encontrabas segun el guardado anterior y la carga de nuevo
         //Tambien carga las pruebas si cumples las condiciones necesarias
         try {
@@ -59,7 +62,6 @@ public class Escenario1 extends JFrame {
             throw new RuntimeException(ex);
         }
 
-        System.out.println("asd");
 
         //EL ORDEN DE ESTO ES BASICAMENTE EL ORDEN DE LAS CAPAS
         contentPane.setLayout(null);
@@ -107,7 +109,7 @@ public class Escenario1 extends JFrame {
                         //TODOS LOS CAMBIOS DE SPRITES Y LA MECANICA DE PRUEBAS
                         if (numeroTextoActual == 0) {
 
-                            background.setBackground(background.backgroundCortePanoramica());
+                            gestorSprites.setSprite();
 
                         }
                         if (numeroTextoActual == 2) {
@@ -227,6 +229,9 @@ public class Escenario1 extends JFrame {
                             spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetCondescendiente());
                             background.setBackground(background.backgroundStandFiscalia());
                         }
+
+                        //CREAR GESTOR DE SPRITES QUE CAMBIE TAMBIEN LA UI Y EL BACKGROUND
+
 
 
                         //CREAR EL GESTOR EVENTOS EN BASE A la UI
