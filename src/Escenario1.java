@@ -98,7 +98,6 @@ public class Escenario1 extends JFrame {
                 if (e.getKeyChar() == 'z' || e.getKeyChar() == 'Z') {
 
 
-
                     if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
 
                         //ESTA LINEA PONE EL DIALOGO DESPUES DE QUE EL CONTADOR SUME 1
@@ -127,7 +126,7 @@ public class Escenario1 extends JFrame {
                             gestorSprites.setSprite("Juez", juezSprites.juezSetIdle());
                             actaJuicio.labelEscenaCrimen.setVisible(true);
                         }
-                        if (numeroTextoActual > 6 && numeroTextoActual < 8) {
+                        if (numeroTextoActual >= 6 && numeroTextoActual < 8) {
 
 
                             gestorSprites.setSprite("Defensa", amaQuillerSprites.amaQuillerSetLlorando());
@@ -178,10 +177,6 @@ public class Escenario1 extends JFrame {
 
                             gestorSprites.setSprite("Miles", milesEdgeworthSprites.milesEdgeworthSetCondescendiente());
                         }
-
-                        //CREAR GESTOR DE SPRITES QUE CAMBIE TAMBIEN LA UI Y EL BACKGROUND
-
-
 
                         //CREAR EL GESTOR EVENTOS EN BASE A la UI
                         //Guardado, escribe en un documento de texto externo la linea actual en la que te encuentras
