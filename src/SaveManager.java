@@ -26,10 +26,10 @@ public class SaveManager {
 
     public int cargar() throws FileNotFoundException {
         Scanner scanner = new Scanner(saveFile);
-        String nextToken = scanner.next();
-        System.out.println(nextToken);
+        String next = scanner.next();
+        System.out.println(next);
         scanner.close();
-        return Integer.parseInt(nextToken);
+        return Integer.parseInt(next);
     }
 
 

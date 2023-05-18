@@ -58,7 +58,7 @@ public class TextoEscenario1 {
         arrayTexto.add("(Estoy seguro de que hay una contradiccion en lo que acaba de decir... Deberia revisar la descripcion de las pruebas en el acta " +
                 "del juicio...)");
         //15
-        arrayTexto.add("La teoria de la fiscalia claramente contradice los hechos, su senoria.");
+        arrayTexto.add("Un momento.");
 
         //16
         arrayTexto.add("Contradice los hechos? Podria explicarnos a que se refiere?");
