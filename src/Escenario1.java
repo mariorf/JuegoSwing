@@ -101,7 +101,6 @@ public class Escenario1 extends JFrame {
 
                     if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
 
-
                         //ESTA LINEA PONE EL DIALOGO DESPUES DE QUE EL CONTADOR SUME 1
                         campoTextoEsc1.setText(textoEscenario1.arrayTexto.get(numeroTextoActual));
 
@@ -109,80 +108,50 @@ public class Escenario1 extends JFrame {
                         //TODOS LOS CAMBIOS DE SPRITES Y LA MECANICA DE PRUEBAS
                         if (numeroTextoActual == 0) {
 
-                            gestorSprites.setSprite();
-
+                            gestorSprites.setSprite("Juez", juezSprites.juezSetIdle());
                         }
                         if (numeroTextoActual == 2) {
 
-                            spriteDisplayTestigos.setSpriteImage(null);
-                            background.setBackground(background.backgroundStandJuez());
-                            spriteDisplayJuez.setSpriteImage(juezSprites.juezSetIdle());
                             actaJuicio.labelEscenaCrimen.setVisible(true);
-                            ui.setNombrePersonaje("Juez");
                         }
                         if (numeroTextoActual == 3) {
 
-                            ui.setNombrePersonaje("Miles E.");
-                            spriteDisplayTestigos.setSpriteImage(null);
-                            spriteDisplayJuez.setSpriteImage(null);
-                            spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetIdle());
-                            background.setBackground(background.backgroundStandFiscalia());
+                            gestorSprites.setSprite("Miles", milesEdgeworthSprites.milesEdgeworthSetIdle());
                         }
                         if (numeroTextoActual == 4) {
 
-                            ui.setNombrePersonaje("Defensa");
-                            spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetLlorando());
-                            spriteDisplayJuez.setSpriteImage(null);
-                            spriteDisplayFiscalia.setSpriteImage(null);
-                            background.setBackground(background.backgroundStandTestigo());
+                            gestorSprites.setSprite("Defensa", amaQuillerSprites.amaQuillerSetLlorando());
                         }
                         if (numeroTextoActual == 5) {
 
-                            spriteDisplayTestigos.setSpriteImage(null);
-                            background.setBackground(background.backgroundStandJuez());
-                            spriteDisplayJuez.setSpriteImage(juezSprites.juezSetIdle());
+                            gestorSprites.setSprite("Juez", juezSprites.juezSetIdle());
                             actaJuicio.labelEscenaCrimen.setVisible(true);
-                            ui.setNombrePersonaje("Juez");
                         }
                         if (numeroTextoActual > 6 && numeroTextoActual < 8) {
 
+
+                            gestorSprites.setSprite("Defensa", amaQuillerSprites.amaQuillerSetLlorando());
                             ui.setNombrePersonaje("Tutorial");
-                            spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetIdle());
-                            spriteDisplayJuez.setSpriteImage(null);
-                            spriteDisplayFiscalia.setSpriteImage(null);
-                            background.setBackground(background.backgroundStandTestigo());
                         }
                         if (numeroTextoActual == 9) {
 
-                            spriteDisplayTestigos.setSpriteImage(null);
-                            background.setBackground(background.backgroundStandJuez());
-                            spriteDisplayJuez.setSpriteImage(juezSprites.juezSetIdle());
-                            actaJuicio.labelEscenaCrimen.setVisible(true);
-                            ui.setNombrePersonaje("Juez");
+
+                            gestorSprites.setSprite("Juez", juezSprites.juezSetIdle());
 
                             if (numeroTextoActual == 9 && e.getKeyChar() == 'z' || e.getKeyChar() == 'Z') {
                                 numeroTextoActual = 9;
                                 return;
                             }
-
                         }
                         if (numeroTextoActual == 10) {
 
-                            ui.setNombrePersonaje("Defensa");
-                            spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetLlorando());
-                            spriteDisplayJuez.setSpriteImage(null);
-                            spriteDisplayFiscalia.setSpriteImage(null);
-                            background.setBackground(background.backgroundStandTestigo());
+
+                            gestorSprites.setSprite("Ama",amaQuillerSprites.amaQuillerSetLlorando());
                         }
 
                         if (numeroTextoActual > 10 && numeroTextoActual <= 14) {
 
-                            ui.setNombrePersonaje("Miles E.");
-                            spriteDisplayTestigos.setSpriteImage(null);
-                            spriteDisplayJuez.setSpriteImage(null);
-                            spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetPensando());
-                            background.setBackground(background.backgroundStandFiscalia());
-
+                            gestorSprites.setSprite("Miles", milesEdgeworthSprites.milesEdgeworthSetPensando());
 
                             if (numeroTextoActual == 14 && e.getKeyChar() == 'z' || e.getKeyChar() == 'Z') {
                                 numeroTextoActual = 11;
@@ -191,43 +160,23 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual == 15) {
 
-                            ui.setNombrePersonaje("Defensa");
-                            spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetLlorando());
-                            spriteDisplayJuez.setSpriteImage(null);
-                            spriteDisplayFiscalia.setSpriteImage(null);
-                            background.setBackground(background.backgroundStandTestigo());
+                            gestorSprites.setSprite("Defensa", amaQuillerSprites.amaQuillerSetLlorando());
                         }
                         if (numeroTextoActual == 16) {
 
-                            spriteDisplayTestigos.setSpriteImage(null);
-                            background.setBackground(background.backgroundStandJuez());
-                            spriteDisplayJuez.setSpriteImage(juezSprites.juezSetIdle());
-                            actaJuicio.labelEscenaCrimen.setVisible(true);
-                            ui.setNombrePersonaje("Juez");
+                            gestorSprites.setSprite("Juez", juezSprites.juezSetIdle());
                         }
                         if (numeroTextoActual > 16 && numeroTextoActual <= 18) {
 
-                            ui.setNombrePersonaje("Defensa");
-                            spriteDisplayTestigos.setSpriteImage(amaQuillerSprites.amaQuillerSetLlorando());
-                            spriteDisplayJuez.setSpriteImage(null);
-                            spriteDisplayFiscalia.setSpriteImage(null);
-                            background.setBackground(background.backgroundStandTestigo());
+                            gestorSprites.setSprite("Defensa", amaQuillerSprites.amaQuillerSetLlorando());
                         }
                         if (numeroTextoActual >= 19) {
 
-                            ui.setNombrePersonaje("Miles E.");
-                            spriteDisplayTestigos.setSpriteImage(null);
-                            spriteDisplayJuez.setSpriteImage(null);
-                            spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetSorprendido());
-                            background.setBackground(background.backgroundStandFiscalia());
+                            gestorSprites.setSprite("Miles", milesEdgeworthSprites.milesEdgeworthSetSorprendido());
                         }
                         if (numeroTextoActual > 19) {
 
-                            ui.setNombrePersonaje("Miles E.");
-                            spriteDisplayTestigos.setSpriteImage(null);
-                            spriteDisplayJuez.setSpriteImage(null);
-                            spriteDisplayFiscalia.setSpriteImage(milesEdgeworthSprites.milesEdgeworthSetCondescendiente());
-                            background.setBackground(background.backgroundStandFiscalia());
+                            gestorSprites.setSprite("Miles", milesEdgeworthSprites.milesEdgeworthSetCondescendiente());
                         }
 
                         //CREAR GESTOR DE SPRITES QUE CAMBIE TAMBIEN LA UI Y EL BACKGROUND

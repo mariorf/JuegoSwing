@@ -27,11 +27,44 @@ public class GestorSprites {
         this.background=background;
     }
 
-    public void setSprite(){
+    public void setSprite(String personaje, String path){
 
-            spriteDisplayFiscalia.setSpriteImage("Sprites/AmaQuiller/Idle.gif");
-            background.setBackground("Sprites/Backgrounds/standFiscalia.png");
+            if(personaje=="Juez"){
+
+                spriteDisplayTestigos.setSpriteImage(null);
+                spriteDisplayFiscalia.setSpriteImage(null);
+
+                spriteDisplayJuez.setSpriteImage(path);
+                background.setBackground("Sprites/Backgrounds/standJuez.jpg");
+                ui.setNombrePersonaje("Juez");
+            }
+            if(personaje=="Defensa"){
+
+                spriteDisplayFiscalia.setSpriteImage(null);
+                spriteDisplayJuez.setSpriteImage(null);
+
+                spriteDisplayTestigos.setSpriteImage(path);
+                background.setBackground("Sprites/Backgrounds/standTestigo.png");
+                ui.setNombrePersonaje("Defensa");
+            }
+            if(personaje=="Ama"){
+
+                spriteDisplayJuez.setSpriteImage(null);
+                spriteDisplayFiscalia.setSpriteImage(null);
+
+                spriteDisplayTestigos.setSpriteImage(path);
+                background.setBackground("Sprites/Backgrounds/standTestigo.png");
+                ui.setNombrePersonaje("Ama");
+            }
+            if(personaje=="Miles"){
+
+                spriteDisplayJuez.setSpriteImage(null);
+                spriteDisplayTestigos.setSpriteImage(null);
+
+                spriteDisplayFiscalia.setSpriteImage(path);
+                background.setBackground("Sprites/Backgrounds/standFiscalia.png");
+                ui.setNombrePersonaje("Miles");
+            }
 
     }
-
 }
