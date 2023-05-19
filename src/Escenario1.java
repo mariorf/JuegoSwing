@@ -108,7 +108,7 @@ public class Escenario1 extends JFrame {
                         //TODOS LOS CAMBIOS DE SPRITES Y LA MECANICA DE PRUEBAS
                         if (numeroTextoActual == 0) {
 
-                            gestorSprites.setSprite("Juez", juezSprites.juezSetIdle());
+                            gestorSprites.setSprite("Defensa", "Sprites/PhoenixWright/Frame_0045.gif");
                         }
                         if (numeroTextoActual == 2) {
 

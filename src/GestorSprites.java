@@ -7,7 +7,6 @@ public class GestorSprites {
     SpriteDisplayJuez spriteDisplayJuez;
     SpriteDisplayFiscalia spriteDisplayFiscalia;
 
-
     AmaQuillerSprites amaQuillerSprites;
     JuezSprites juezSprites;
     MilesEdgeworthSprites milesEdgeworthSprites;
@@ -29,6 +28,9 @@ public class GestorSprites {
 
     public void setSprite(String personaje, String path){
 
+        
+
+
             if(personaje=="Juez"){
 
                 spriteDisplayTestigos.setSpriteImage(null);
@@ -42,10 +44,11 @@ public class GestorSprites {
 
                 spriteDisplayFiscalia.setSpriteImage(null);
                 spriteDisplayJuez.setSpriteImage(null);
-
-                spriteDisplayTestigos.setSpriteImage(path);
                 background.setBackground("Sprites/Backgrounds/standTestigo.png");
                 ui.setNombrePersonaje("Defensa");
+
+                spriteDisplayTestigos.setSpriteImage("Sprites/PhoenixWright/gifmaker_me.gif");
+                spriteDisplayTestigos.setSpriteImage("Sprites/PhoenixWright/Frame_0045.gif");
             }
             if(personaje=="Ama"){
 
@@ -65,6 +68,5 @@ public class GestorSprites {
                 background.setBackground("Sprites/Backgrounds/standFiscalia.png");
                 ui.setNombrePersonaje("Miles");
             }
-
     }
 }
