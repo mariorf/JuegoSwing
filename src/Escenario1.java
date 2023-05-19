@@ -98,6 +98,7 @@ public class Escenario1 extends JFrame {
                 if (e.getKeyChar() == 'z' || e.getKeyChar() == 'Z') {
 
 
+
                     if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
 
                         //ESTA LINEA PONE EL DIALOGO DESPUES DE QUE EL CONTADOR SUME 1
