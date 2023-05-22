@@ -45,14 +45,14 @@ public class GestorSprites {
                 background.setBackground(background.backgroundStandJuez());
                 ui.setNombrePersonaje("Juez");
             }
-            if(personaje=="Defensa"){
+            if(personaje=="Phoenix"){
 
                 spriteDisplayFiscalia.setSpriteImage(null);
                 spriteDisplayJuez.setSpriteImage(null);
                 spriteDisplayTestigos.setSpriteImage(null);
 
                 background.setBackground(background.backgroundStandDefensa());
-                ui.setNombrePersonaje("Defensa");
+                ui.setNombrePersonaje("Phoneix W.");
 
 
                 if(path=="GolpeMesa"){
@@ -74,10 +74,10 @@ public class GestorSprites {
                     //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
                     spriteDisplayDefensa.setSpriteImage(null);
 
-                    spriteDisplayTestigos.setSpriteImage("Sprites/PhoenixWright/Animaciones/Apuntando.gif");
+                    spriteDisplayDefensa.setSpriteImage("Sprites/PhoenixWright/Animaciones/Apuntando.gif");
                     Timer timer = new Timer(700, e -> {
 
-                        spriteDisplayTestigos.setSpriteImage("Sprites/PhoenixWright/Animaciones/ApuntarEstaticoBocaCerrada.gif");
+                        spriteDisplayDefensa.setSpriteImage("Sprites/PhoenixWright/Animaciones/ApuntarEstaticoBocaCerrada.gif");
                     });
                     timer.start();
                     timer.setRepeats(false);

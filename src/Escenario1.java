@@ -110,7 +110,7 @@ public class Escenario1 extends JFrame {
                         //TODOS LOS CAMBIOS DE SPRITES Y LA MECANICA DE PRUEBAS
                         if (numeroTextoActual == 0) {
 
-                            gestorSprites.setSprite("Defensa", "GolpeMesa");
+                            gestorSprites.setSprite("Phoenix", "GolpeMesa");
                         }
                         if (numeroTextoActual == 2) {
 
@@ -122,7 +122,7 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual == 4) {
 
-                            gestorSprites.setSprite("Defensa", johnSprites.johnSetLlorando());
+                            gestorSprites.setSprite("Phoenix", johnSprites.johnSetLlorando());
                         }
                         if (numeroTextoActual == 5) {
 
@@ -132,7 +132,7 @@ public class Escenario1 extends JFrame {
                         if (numeroTextoActual >= 6 && numeroTextoActual < 8) {
 
 
-                            gestorSprites.setSprite("Defensa", johnSprites.johnSetLlorando());
+                            gestorSprites.setSprite("Phoenix", johnSprites.johnSetLlorando());
                             ui.setNombrePersonaje("Tutorial");
                         }
                         if (numeroTextoActual == 9) {
@@ -162,7 +162,7 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual == 15) {
 
-                            gestorSprites.setSprite("Defensa", johnSprites.johnSetLlorando());
+                            gestorSprites.setSprite("Phoenix", "Apuntando");
                         }
                         if (numeroTextoActual == 16) {
 
@@ -170,12 +170,12 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual == 17) {
 
-                            gestorSprites.setSprite("Defensa", "GolpeMesa");
+                            gestorSprites.setSprite("Phoenix", "GolpeMesa");
                         }
 
                         if (numeroTextoActual == 18) {
 
-                            gestorSprites.setSprite("Defensa", "Apuntando");
+                            gestorSprites.setSprite("Phoenix", "Apuntando");
                         }
                         if (numeroTextoActual >= 19) {
 

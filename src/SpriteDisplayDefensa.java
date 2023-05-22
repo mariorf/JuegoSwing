@@ -6,7 +6,7 @@ public class SpriteDisplayDefensa {
 
     public SpriteDisplayDefensa() {
 
-        spriteLabel.setLocation(20,-58);
+        spriteLabel.setLocation(20,-35);
         spriteLabel.setSize(1000,1100);
     }
 
