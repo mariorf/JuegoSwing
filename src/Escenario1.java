@@ -35,12 +35,13 @@ public class Escenario1 extends JFrame {
         SpriteDisplayTestigos spriteDisplayTestigos = new SpriteDisplayTestigos();
         SpriteDisplayJuez spriteDisplayJuez = new SpriteDisplayJuez();
         SpriteDisplayFiscalia spriteDisplayFiscalia = new SpriteDisplayFiscalia();
+        SpriteDisplayDefensa spriteDisplayDefensa = new SpriteDisplayDefensa();
         UI ui = new UI();
         ActaJuicio actaJuicio = new ActaJuicio(ui);
         Background background = new Background();
         SaveManager saveManager = new SaveManager();
         Robot robot = new Robot();
-        GestorSprites gestorSprites = new GestorSprites(spriteDisplayFiscalia, spriteDisplayJuez, spriteDisplayTestigos, background, ui);
+        GestorSprites gestorSprites = new GestorSprites(spriteDisplayFiscalia, spriteDisplayJuez, spriteDisplayTestigos, spriteDisplayDefensa, background, ui);
 
 
         //Poner los valores necesarios para la ventana
@@ -71,6 +72,7 @@ public class Escenario1 extends JFrame {
         contentPane.add(ui.getNombrePersonajeTextArea());
         contentPane.add(ui.getTextBoxLabel());
         contentPane.add(botonPasarTexto);
+        contentPane.add(spriteDisplayDefensa.getSpriteLabel());
         contentPane.add(spriteDisplayFiscalia.getSpriteLabel());
         contentPane.add(spriteDisplayJuez.getSpriteLabel());
         contentPane.add(spriteDisplayTestigos.getSpriteLabel());
@@ -166,9 +168,14 @@ public class Escenario1 extends JFrame {
 
                             gestorSprites.setSprite("Juez", juezSprites.juezSetIdle());
                         }
-                        if (numeroTextoActual > 16 && numeroTextoActual <= 18) {
+                        if (numeroTextoActual == 17) {
 
-                            gestorSprites.setSprite("Defensa", johnSprites.johnSetLlorando());
+                            gestorSprites.setSprite("Defensa", "GolpeMesa");
+                        }
+
+                        if (numeroTextoActual == 18) {
+
+                            gestorSprites.setSprite("Defensa", "Apuntando");
                         }
                         if (numeroTextoActual >= 19) {
 
