@@ -13,10 +13,10 @@ public class GestorSprites {
     JuezSprites juezSprites;
     MilesEdgeworthSprites milesEdgeworthSprites;
     NoraMarblerSprites noraMarblerSprites;
+    PhoenixSprites phoenixSprites;
     UI ui;
-
-
     Background background;
+
 
     public GestorSprites(SpriteDisplayFiscalia spriteDisplayFiscalia, SpriteDisplayJuez spriteDisplayJuez,
                          SpriteDisplayTestigos spriteDisplayTestigos, Background background, UI ui){
@@ -31,7 +31,6 @@ public class GestorSprites {
 
     public void setSprite(String personaje, String path){
 
-        
 
 
             if(personaje=="Juez"){
@@ -50,14 +49,33 @@ public class GestorSprites {
                 background.setBackground("Sprites/Backgrounds/standTestigo.png");
                 ui.setNombrePersonaje("Defensa");
 
-                spriteDisplayTestigos.setSpriteImage("Sprites/PhoenixWright/gifmaker_me.gif");
-                Timer timer = new Timer(700, e -> {
 
-                    spriteDisplayTestigos.setSpriteImage("Sprites/PhoenixWright/Frame_0045.gif");
-                });
-                timer.setRepeats(false);
-                timer.start();
+                if(path=="GolpeMesa"){
+
+                    spriteDisplayTestigos.setSpriteImage("Sprites/PhoenixWright/Animaciones/GolpeMesa.gif");
+                    Timer timer = new Timer(700, e -> {
+
+                        spriteDisplayTestigos.setSpriteImage("Sprites/PhoenixWright/Animaciones/GolpeMesaEstatico.gif");
+                    });
+                    timer.start();
+                    timer.setRepeats(false);
+                }
+
+                if(path=="Apuntando"){
+
+                    spriteDisplayTestigos.setSpriteImage("Sprites/PhoenixWright/Animaciones/Apuntando.gif");
+                    Timer timer = new Timer(700, e -> {
+
+                        spriteDisplayTestigos.setSpriteImage("Sprites/PhoenixWright/Animaciones/ApuntarEstaticoBocaCerrada.gif");
+                    });
+                    timer.start();
+                    timer.setRepeats(false);
+                }
+
             }
+
+
+
             if(personaje=="Ama"){
 
                 spriteDisplayJuez.setSpriteImage(null);

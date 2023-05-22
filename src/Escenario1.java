@@ -22,6 +22,7 @@ public class Escenario1 extends JFrame {
 
         //Creacion de los objetos para llamar a los sprites de los personajes
         JohnSprites johnSprites = new JohnSprites();
+        PhoenixSprites phoenixSprites = new PhoenixSprites();
         JuezSprites juezSprites = new JuezSprites();
         MilesEdgeworthSprites milesEdgeworthSprites = new MilesEdgeworthSprites();
         NoraMarblerSprites noraMarblerSprites = new NoraMarblerSprites();
@@ -107,7 +108,7 @@ public class Escenario1 extends JFrame {
                         //TODOS LOS CAMBIOS DE SPRITES Y LA MECANICA DE PRUEBAS
                         if (numeroTextoActual == 0) {
 
-                            gestorSprites.setSprite("Defensa", "Sprites/.gif");
+                            gestorSprites.setSprite("Defensa", "GolpeMesa");
                         }
                         if (numeroTextoActual == 2) {
 
