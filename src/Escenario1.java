@@ -110,7 +110,7 @@ public class Escenario1 extends JFrame {
                         //TODOS LOS CAMBIOS DE SPRITES Y LA MECANICA DE PRUEBAS
                         if (numeroTextoActual == 0) {
 
-                            gestorSprites.setSprite("Phoenix", "GolpeMesa");
+                            background.setBackground(background.backgroundCortePanoramica());
                         }
                         if (numeroTextoActual == 2) {
 
@@ -122,7 +122,7 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual == 4) {
 
-                            gestorSprites.setSprite("Phoenix", johnSprites.johnSetLlorando());
+                            gestorSprites.setSprite("Phoenix", "Hablando");
                         }
                         if (numeroTextoActual == 5) {
 
