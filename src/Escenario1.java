@@ -21,7 +21,7 @@ public class Escenario1 extends JFrame {
     public Escenario1() throws InterruptedException, IOException, AWTException {
 
         //Creacion de los objetos para llamar a los sprites de los personajes
-        AmaQuillerSprites amaQuillerSprites = new AmaQuillerSprites();
+        JohnSprites johnSprites = new JohnSprites();
         JuezSprites juezSprites = new JuezSprites();
         MilesEdgeworthSprites milesEdgeworthSprites = new MilesEdgeworthSprites();
         NoraMarblerSprites noraMarblerSprites = new NoraMarblerSprites();
@@ -104,11 +104,10 @@ public class Escenario1 extends JFrame {
                         //ESTA LINEA PONE EL DIALOGO DESPUES DE QUE EL CONTADOR SUME 1
                         campoTextoEsc1.setText(textoEscenario1.arrayTexto.get(numeroTextoActual));
 
-
                         //TODOS LOS CAMBIOS DE SPRITES Y LA MECANICA DE PRUEBAS
                         if (numeroTextoActual == 0) {
 
-                            gestorSprites.setSprite("Defensa", "Sprites/PhoenixWright/Frame_0045.gif");
+                            gestorSprites.setSprite("Defensa", "Sprites/.gif");
                         }
                         if (numeroTextoActual == 2) {
 
@@ -120,7 +119,7 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual == 4) {
 
-                            gestorSprites.setSprite("Defensa", amaQuillerSprites.amaQuillerSetLlorando());
+                            gestorSprites.setSprite("Defensa", johnSprites.johnSetLlorando());
                         }
                         if (numeroTextoActual == 5) {
 
@@ -130,7 +129,7 @@ public class Escenario1 extends JFrame {
                         if (numeroTextoActual >= 6 && numeroTextoActual < 8) {
 
 
-                            gestorSprites.setSprite("Defensa", amaQuillerSprites.amaQuillerSetLlorando());
+                            gestorSprites.setSprite("Defensa", johnSprites.johnSetLlorando());
                             ui.setNombrePersonaje("Tutorial");
                         }
                         if (numeroTextoActual == 9) {
@@ -146,7 +145,7 @@ public class Escenario1 extends JFrame {
                         if (numeroTextoActual == 10) {
 
 
-                            gestorSprites.setSprite("Ama",amaQuillerSprites.amaQuillerSetLlorando());
+                            gestorSprites.setSprite("Ama",johnSprites.johnSetLlorando());
                         }
 
                         if (numeroTextoActual > 10 && numeroTextoActual <= 14) {
@@ -160,7 +159,7 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual == 15) {
 
-                            gestorSprites.setSprite("Defensa", amaQuillerSprites.amaQuillerSetLlorando());
+                            gestorSprites.setSprite("Defensa", johnSprites.johnSetLlorando());
                         }
                         if (numeroTextoActual == 16) {
 
@@ -168,7 +167,7 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual > 16 && numeroTextoActual <= 18) {
 
-                            gestorSprites.setSprite("Defensa", amaQuillerSprites.amaQuillerSetLlorando());
+                            gestorSprites.setSprite("Defensa", johnSprites.johnSetLlorando());
                         }
                         if (numeroTextoActual >= 19) {
 

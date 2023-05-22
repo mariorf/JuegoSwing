@@ -16,7 +16,7 @@ public class TextoEscenario1 {
         arrayTexto.add("20 de Marzo de 1876, Tribunal de Justicia de Texas.");
 
         //2
-        arrayTexto.add("Se abre la sesion en el juicio del Sr. Ama Quiller.");
+        arrayTexto.add("Se abre la sesion en el juicio del Sr. John F. Kulprit.");
 
         //3
         arrayTexto.add("La fiscalia esta lista, su senoria.");

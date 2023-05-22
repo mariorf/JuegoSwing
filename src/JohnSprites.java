@@ -5,47 +5,47 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class AmaQuillerSprites {
+public class JohnSprites {
 
 
 
 
-    public String amaQuillerSetIdle() {
+    public String johnSetIdle() {
 
         return "Sprites/AmaQuiller/Idle.gif";
     }
 
-    public String amaQuillerSetLlorando() {
+    public String johnSetLlorando() {
 
         return "Sprites/AmaQuiller/llorando.gif";
     }
 
-    public String amaQuillerSetMirandoSerio() {
+    public String johnSetMirandoSerio() {
 
         return "Sprites/AmaQuiller/mirandoSerio.gif";
     }
 
-    public String amaQuillerSetMordiendoBola() {
+    public String johnSetMordiendoBola() {
 
         return "Sprites/AmaQuiller/mordiendoBola.gif";
     }
 
-    public String amaQuillerSetOjosCerrados() {
+    public String johnSetOjosCerrados() {
 
         return "Sprites/AmaQuiller/OjosCerrados.gif";
     }
 
-    public String amaQuillerSetSorprendido() {
+    public String johnSetSorprendido() {
 
         return "Sprites/AmaQuiller/sorprendido.gif";
     }
 
-    public String amaQuillerSetTapandoBoca() {
+    public String johnSetTapandoBoca() {
 
         return "Sprites/AmaQuiller/TapandoBoca.gif";
     }
 
-    public String amaQuillerSetTapandoBoca2() {
+    public String johnSetTapandoBoca2() {
 
         return "Sprites/AmaQuiller/TapandoBoca2.gif";
     }

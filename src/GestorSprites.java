@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class GestorSprites {
 
@@ -7,11 +9,12 @@ public class GestorSprites {
     SpriteDisplayJuez spriteDisplayJuez;
     SpriteDisplayFiscalia spriteDisplayFiscalia;
 
-    AmaQuillerSprites amaQuillerSprites;
+    JohnSprites johnSprites;
     JuezSprites juezSprites;
     MilesEdgeworthSprites milesEdgeworthSprites;
     NoraMarblerSprites noraMarblerSprites;
     UI ui;
+
 
     Background background;
 
@@ -48,7 +51,12 @@ public class GestorSprites {
                 ui.setNombrePersonaje("Defensa");
 
                 spriteDisplayTestigos.setSpriteImage("Sprites/PhoenixWright/gifmaker_me.gif");
-                spriteDisplayTestigos.setSpriteImage("Sprites/PhoenixWright/Frame_0045.gif");
+                Timer timer = new Timer(700, e -> {
+
+                    spriteDisplayTestigos.setSpriteImage("Sprites/PhoenixWright/Frame_0045.gif");
+                });
+                timer.setRepeats(false);
+                timer.start();
             }
             if(personaje=="Ama"){
 
