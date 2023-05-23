@@ -34,7 +34,7 @@ public class TextoEscenario1 {
         arrayTexto.add("Las pruebas se te iran dando durante el transcurso del juicio, puedes " +
                 "verlas en todo momento pulsando la tecla A. ");
         //8
-        arrayTexto.add("El juez te ha pedido el arma homicida, pulsa la tecla A y haz click derecho sobre el arma para seleccionarla, luego hazle click a la imagen en el siguiente" +
+        arrayTexto.add("El juez te ha pedido el arma homicida, pulsa la tecla A y haz click derecho sobre el arma para seleccionarla, luego haz click izquierdo a la imagen en el siguiente" +
                 "dialogo para presentarla.");
 
         //9
@@ -45,13 +45,13 @@ public class TextoEscenario1 {
 
         //11
         arrayTexto.add("Asi es, la teoria de la fiscalia es que el acusado fue a robar en la habitacion de la victima, pero se encontro que aun estaba" +
-                " alli, asi que la victima que es");
+                " alli, asi que la victima");
         //12
         arrayTexto.add(" fue a detenerlo. Pero el Sheriff debio de haber dejado el arma cerca del acusado, asi que mientras escribia su reporte" +
                 " le disparo a traicion por detras");
 
         //13
-        arrayTexto.add("Poco despues, consciente de lo que habia hecho y aun esposado, acerco el cadaver y busco sus llaves para liberarse," +
+        arrayTexto.add("Luego, consciente de lo que hacia y aun esposado, acerco el cadaver y busco sus llaves para liberarse," +
                 " pero las llaves que cogio eran las de su casa, no de las esposas");
 
         //14
@@ -73,11 +73,20 @@ public class TextoEscenario1 {
         arrayTexto.add("...");
 
         //20
-        arrayTexto.add("No hay forma de demostrar si estaba o no fingiendolo, no tienes pruebas para demostrar si estaba o no consciente realmente, lo que si" +
-                "es un hecho es que el arma se econtro");
+        arrayTexto.add("Esa situacion seria muy conveniente, sin embargo, las pruebas siguen siendo definitivas, el tenia la pistola con la bala disparada, estaba esposado y solo el" +
+                " lo podria haber hecho.");
 
         //21
-        arrayTexto.add(" en sus manos, con una bala disparada eso junto con la causa de muerte de la victima solo nos deja una opcion.\n El asesino es el Sr. Ama");
+        arrayTexto.add("Aun asi, por si aun quedara algun atisbo de duda sobre la culpabilidad del acusado...");
+
+        //22
+        arrayTexto.add("Llamo al estrado al primer testigo.");
+
+        //23
+        arrayTexto.add("!");
+
+        //24
+        arrayTexto.add("(Un testigo? Solo podria tratarse de el...)");
     }
 
     public int getTamañoArray(){

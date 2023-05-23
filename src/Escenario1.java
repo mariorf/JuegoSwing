@@ -100,8 +100,6 @@ public class Escenario1 extends JFrame {
                 //Para pasar las lineas de dialogo
                 if (e.getKeyChar() == 'z' || e.getKeyChar() == 'Z') {
 
-
-
                     if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
 
                         //ESTA LINEA PONE EL DIALOGO DESPUES DE QUE EL CONTADOR SUME 1
@@ -127,16 +125,13 @@ public class Escenario1 extends JFrame {
                         if (numeroTextoActual == 5) {
 
                             gestorSprites.setSprite("Juez", "Hablando");
-                            actaJuicio.labelEscenaCrimen.setVisible(true);
                         }
                         if (numeroTextoActual >= 6 && numeroTextoActual < 8) {
-
 
                             gestorSprites.setSprite("Phoenix", "GolpeMesa");
                             ui.setNombrePersonaje("Tutorial");
                         }
                         if (numeroTextoActual == 9) {
-
 
                             gestorSprites.setSprite("Juez", "Hablando");
 
@@ -153,6 +148,7 @@ public class Escenario1 extends JFrame {
 
                         if (numeroTextoActual > 10 && numeroTextoActual <= 14) {
 
+
                             gestorSprites.setSprite("Miles", "Leyendo");
 
                             if (numeroTextoActual == 14 && e.getKeyChar() == 'z' || e.getKeyChar() == 'Z') {
@@ -162,31 +158,52 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual == 15) {
 
+
                             gestorSprites.setSprite("Phoenix", "Apuntando");
                         }
                         if (numeroTextoActual == 16) {
 
-                            gestorSprites.setSprite("Juez", juezSprites.juezSetIdle());
+
+                            gestorSprites.setSprite("Juez", "Hablando");
                         }
                         if (numeroTextoActual == 17) {
+
 
                             gestorSprites.setSprite("Phoenix", "GolpeMesa");
                         }
 
                         if (numeroTextoActual == 18) {
 
+
                             gestorSprites.setSprite("Phoenix", "Apuntando");
                         }
-                        if (numeroTextoActual >= 19) {
+                        if (numeroTextoActual == 19) {
+
 
                             gestorSprites.setSprite("Miles", "CondescendienteNegando");
                         }
-                        if (numeroTextoActual > 19) {
+                        if (numeroTextoActual >= 20 && numeroTextoActual<=21) {
 
-                            gestorSprites.setSprite("Miles", milesEdgeworthSprites.milesEdgeworthSetCondescendiente());
+
+                            gestorSprites.setSprite("Miles", "CondescendienteHablando");
+                        }
+                        if (numeroTextoActual==22) {
+
+
+                            gestorSprites.setSprite("Miles", "Golpe");
+                        }
+                        if(numeroTextoActual==23) {
+
+
+                            gestorSprites.setSprite("Phoenix", "IdleSinHablar");
+                        }
+                        if(numeroTextoActual==24) {
+
+
+                            gestorSprites.setSprite("Phoenix", "Pensando");
                         }
 
-                        //CREAR EL GESTOR EVENTOS EN BASE A la UI
+
                         //Guardado, escribe en un documento de texto externo la linea actual en la que te encuentras
                         try {
                             saveManager.guardar(numeroTextoActual);
@@ -213,7 +230,6 @@ public class Escenario1 extends JFrame {
 
             }
         });
-
 
         //LISTENER DE LOS CLICKS A LAS PRUEBAS SELECCIONADAS
         ui.getLabelUiPruebaSeleccionada().addMouseListener(new MouseListener() {

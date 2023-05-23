@@ -38,85 +38,48 @@ public class GestorSprites {
             if(personaje=="Juez"){
 
                 setSpritesNull();
-
                 background.setBackground(background.backgroundStandJuez());
                 ui.setNombrePersonaje("Juez");
 
-                if(path=="Asintiendo"){
+                if(path.equals("Asintiendo")){
 
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
-                    spriteDisplayJuez.setSpriteImage(null);
 
-                    spriteDisplayJuez.setSpriteImage("Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezAsintiendo.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayJuez.setSpriteImage("Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezIdle.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionJuez("Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezAsintiendo.gif",
+                            "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezIdle.gif", 700);
                 }
 
-                if(path=="Negando"){
+                if(path.equals("Negando")){
 
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
-                    spriteDisplayJuez.setSpriteImage(null);
 
-                    spriteDisplayJuez.setSpriteImage("Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezNegando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayJuez.setSpriteImage("Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezIdle.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionJuez("Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezNegando.gif",
+                            "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezIdle.gif", 700);
                 }
 
-                if(path=="Hablando"){
+                if(path.equals("Hablando")){
 
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
-                    spriteDisplayJuez.setSpriteImage(null);
 
-                    spriteDisplayJuez.setSpriteImage("Sprites/Sprites/JuezSprites/JuezHablando/JuezHablando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayJuez.setSpriteImage("Sprites/Sprites/JuezSprites/JuezHablando/JuezIdle.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionJuez("Sprites/Sprites/JuezSprites/JuezHablando/JuezHablando.gif",
+                            "Sprites/Sprites/JuezSprites/JuezHablando/JuezIdle.gif", 700);
                 }
 
-                if(path=="Serio"){
+                if(path.equals("Serio")){
 
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
-                    spriteDisplayJuez.setSpriteImage(null);
 
-                    spriteDisplayJuez.setSpriteImage("Sprites/Sprites/JuezSprites/JuezSerio/JuezSerio.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayJuez.setSpriteImage("Sprites/Sprites/JuezSprites/JuezSerio/JuezSerioIdle.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionJuez("Sprites/Sprites/JuezSprites/JuezSerio/JuezSerio.gif",
+                            "Sprites/Sprites/JuezSprites/JuezSerio/JuezSerioIdle.gif", 700);
                 }
 
-                if(path=="Sorprendido"){
+                if(path.equals("Sorprendido")){
 
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
-                    spriteDisplayJuez.setSpriteImage(null);
 
-                    spriteDisplayJuez.setSpriteImage("Sprites/Sprites/JuezSprites/JuezSorprendido/JuezSorprendidoHablando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayJuez.setSpriteImage("Sprites/Sprites/JuezSprites/JuezSorprendido/JuezSorprendidoIdle.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionJuez("Sprites/Sprites/JuezSprites/JuezSorprendido/JuezSorprendidoHablando.gif",
+                            "Sprites/Sprites/JuezSprites/JuezSorprendido/JuezSorprendidoIdle.gif", 700);
                 }
 
-                if(path=="OjosCerrados"){
+                if(path.equals("OjosCerrados")){
 
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
-                    spriteDisplayJuez.setSpriteImage(null);
 
+                    setSpritesNull();
                     spriteDisplayJuez.setSpriteImage("Sprites/Sprites/JuezSprites/JuezSerio/JuezSerioOjosCerrados.gif");
                 }
 
@@ -126,178 +89,116 @@ public class GestorSprites {
 
             if(personaje=="Phoenix"){
 
-                setSpritesNull();
 
                 background.setBackground(background.backgroundStandDefensa());
                 ui.setNombrePersonaje("Phoneix W.");
 
 
-                if(path=="Hablando"){
+                if(path.equals("IdleSinHablar")){
 
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixHablando/PhoenixHablando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixHablando/PhoenixHablandoIdle.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setSpritesNull();
+                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixHablando/PhoenixHablandoIdle.gif");
                 }
 
-                if(path=="GolpeMesa"){
+                if(path.equals("Hablando")){
 
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
 
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixGolpeMesa/PhoenixGolpeMesa.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixGolpeMesa/PhoenixGolpeMesaIdle.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionPhoenix("Sprites/Sprites/PhoenixSprites/PhoenixHablando/PhoenixHablando.gif",
+                            "Sprites/Sprites/PhoenixSprites/PhoenixHablando/PhoenixHablandoIdle.gif", 700);
                 }
 
-                if(path=="GolpeMesaHablando"){
+                if(path.equals("GolpeMesa")){
 
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
-
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixGolpeMesa/PhoenixGolpeMesaHablando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixGolpeMesa/PhoenixGolpeMesaIdle.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionPhoenix("Sprites/Sprites/PhoenixSprites/PhoenixGolpeMesa/PhoenixGolpeMesa.gif",
+                            "Sprites/Sprites/PhoenixSprites/PhoenixGolpeMesa/PhoenixGolpeMesaIdle.gif", 700);
                 }
 
-                if(path=="Apuntando"){
+                if(path.equals("GolpeMesaHablando")){
 
                     //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
 
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixApuntando/PhoenixApuntando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixApuntando/PhoenixApuntandoEstatico.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionPhoenix("Sprites/Sprites/PhoenixSprites/PhoenixGolpeMesa/PhoenixGolpeMesaHablando.gif",
+                            "Sprites/Sprites/PhoenixSprites/PhoenixGolpeMesa/PhoenixGolpeMesaIdle.gif", 700);
                 }
 
-                if(path=="ApuntandoHablando"){
+                if(path.equals("Apuntando")){
 
                     //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
 
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixApuntando/PhoenixApuntandoHablando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixApuntando/PhoenixApuntandoEstatico.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionPhoenix("Sprites/Sprites/PhoenixSprites/PhoenixApuntando/PhoenixApuntando.gif",
+                            "Sprites/Sprites/PhoenixSprites/PhoenixApuntando/PhoenixApuntandoEstatico.gif", 700);
                 }
 
-                if(path=="Asiente"){
+                if(path.equals("ApuntandoHablando")){
 
                     //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
 
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixAsienteONiega/PhoenixAsiente.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixAsienteONiega/PhoenixAsienteNiegaIdle.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionPhoenix("Sprites/Sprites/PhoenixSprites/PhoenixApuntando/PhoenixApuntandoHablando.gif",
+                            "Sprites/Sprites/PhoenixSprites/PhoenixApuntando/PhoenixApuntandoEstatico.gif", 700);
                 }
 
-                if(path=="Niega"){
+                if(path.equals("Asiente")){
 
                     //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
 
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixAsienteONiega/PhoenixNiega.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixAsienteONiega/PhoenixAsienteNiegaIdle.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionPhoenix("Sprites/Sprites/PhoenixSprites/PhoenixAsienteONiega/PhoenixAsiente.gif",
+                            "Sprites/Sprites/PhoenixSprites/PhoenixAsienteONiega/PhoenixAsienteNiegaIdle.gif", 700);
                 }
 
-                if(path=="Derrotado"){
+                if(path.equals("Niega")){
 
                     //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
 
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixDerrotado/PhoenixDerrotado.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixDerrotado/PhoenixDerrotadoIdle.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionPhoenix("Sprites/Sprites/PhoenixSprites/PhoenixAsienteONiega/PhoenixNiega.gif",
+                            "Sprites/Sprites/PhoenixSprites/PhoenixAsienteONiega/PhoenixAsienteNiegaIdle.gif", 700);
                 }
 
-                if(path=="Leyendo"){
+                if(path.equals("Derrotado")){
 
                     //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
 
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixLeyendo/PhoenixLeyendoHablando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixLeyendo/PhoenixLeyendoIdle.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionPhoenix("Sprites/Sprites/PhoenixSprites/PhoenixDerrotado/PhoenixDerrotado.gif",
+                            "Sprites/Sprites/PhoenixSprites/PhoenixDerrotado/PhoenixDerrotadoIdle.gif", 700);
                 }
 
-                if(path=="Pensando"){
+                if(path.equals("Leyendo")){
 
                     //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
 
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixPensando/PhoenixPensandoAnimado.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixPensando/PhoenixPensandoIdle.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionPhoenix("Sprites/Sprites/PhoenixSprites/PhoenixLeyendo/PhoenixLeyendoHablando.gif",
+                            "Sprites/Sprites/PhoenixSprites/PhoenixLeyendo/PhoenixLeyendoIdle.gif", 700);
                 }
 
-                if(path=="PensandoHablando"){
+                if(path.equals("Pensando")){
 
                     //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
 
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixPensando/PhoenixPensandoHablando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixPensando/PhoenixPensandoIdle.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionPhoenix("Sprites/Sprites/PhoenixSprites/PhoenixPensando/PhoenixPensandoAnimado.gif",
+                            "Sprites/Sprites/PhoenixSprites/PhoenixPensando/PhoenixPensandoIdle.gif", 700);
                 }
 
-                if(path=="Rascando"){
+                if(path.equals("PensandoHablando")){
 
                     //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
 
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixRascandoCabeza/PhoenixRascandoCabezaHablando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixRascandoCabeza/PhoenixRascandoCabezaEstatico.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionPhoenix("Sprites/Sprites/PhoenixSprites/PhoenixPensando/PhoenixPensandoHablando.gif",
+                            "Sprites/Sprites/PhoenixSprites/PhoenixPensando/PhoenixPensandoIdle.gif", 700);
                 }
 
-                if(path=="Sudando"){
+                if(path.equals("Rascando")){
 
                     //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
 
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixSudando/PhoenixSudandoHablando.gif");
-                    Timer timer = new Timer(700, e -> {
+                    setAnimacionPhoenix("Sprites/Sprites/PhoenixSprites/PhoenixRascandoCabeza/PhoenixRascandoCabezaHablando.gif",
+                            "Sprites/Sprites/PhoenixSprites/PhoenixRascandoCabeza/PhoenixRascandoCabezaEstatico.gif", 700);
+                }
 
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/PhoenixSprites/PhoenixSudando/PhoenixSudandoEstatico.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                if(path.equals("Sudando")){
+
+                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
+
+                    setAnimacionPhoenix("Sprites/Sprites/PhoenixSprites/PhoenixSudando/PhoenixSudandoHablando.gif",
+                            "Sprites/Sprites/PhoenixSprites/PhoenixSudando/PhoenixSudandoEstatico.gif", 700);
                 }
 
             }
@@ -319,162 +220,145 @@ public class GestorSprites {
             if(personaje=="Miles"){
 
                 setSpritesNull();
-
-                spriteDisplayFiscalia.setSpriteImage(path);
                 background.setBackground(background.backgroundStandFiscalia());
                 ui.setNombrePersonaje("Miles");
 
-                if(path=="Hablando"){
+                if(path.equals("Hablando")){
 
                     //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
+
+                    setAnimacionMiles("Sprites/Sprites/MilesSprites/MilesIdleHablando/MilesHablando.gif",
+                            "Sprites/Sprites/MilesSprites/MilesIdleHablando/MilesHablandoIdle.gif", 700);
+                }
+
+                if(path.equals("Leyendo")){
+
+                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
+
+                    setAnimacionMiles("Sprites/Sprites/MilesSprites/MilesPapel/MilesPapel.gif",
+                            "Sprites/Sprites/MilesSprites/MilesPapel/MilesPapelEstatico.gif", 700);
+                }
+
+                if(path.equals("Pensando")){
+
+                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
+
+                    setAnimacionMiles("Sprites/Sprites/MilesSprites/MilesPensando/MilesPensando.gif",
+                            "Sprites/Sprites/MilesSprites/MilesPensando/MilesPensandoEstatico.gif", 700);
+                }
+
+
+                if(path.equals("Dedo")){
+
+                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
+
+                    setAnimacionMiles("Sprites/Sprites/MilesSprites/MilesDedoCabeza/MilesDedo.gif",
+                            "Sprites/Sprites/MilesSprites/MilesDedoCabeza/MilesDedoEstatico.gif", 700);
+                }
+
+                if(path.equals("Señalando")){
+
+                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
+
+                    setAnimacionMiles("Sprites/Sprites/MilesSprites/MilesSeñalando/MilesSeñalando.gif",
+                            "Sprites/Sprites/MilesSprites/MilesSeñalando/MilesSeñalandoEstatico.gif", 700);
+                }
+
+                if(path.equals("Golpe")){
+
+                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
+
+                    setAnimacionMiles("Sprites/Sprites/MilesSprites/MilesGolpe/MilesGolpe.gif",
+                            "Sprites/Sprites/MilesSprites/MilesGolpe/MilesGolpeEstatico.gif", 700);
+                }
+
+                if(path.equals("GolpeHablando")){
+
+                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
+
+                    setAnimacionMiles("Sprites/Sprites/MilesSprites/MilesGolpe/MilesGolpeHablando.gif",
+                            "Sprites/Sprites/MilesSprites/MilesGolpe/MilesGolpeEstatico.gif", 700);
+                }
+
+                if(path.equals("GolpeEnfadado")){
+
+                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
+
+                    setAnimacionMiles("Sprites/Sprites/MilesSprites/MilesGolpeEnfadado/GolpeEnfadadoHablando.gif",
+                            "Sprites/Sprites/MilesSprites/MilesGolpeEnfadado/GolpeEnfadadoEstatico.gif", 700);
+                }
+
+                if(path.equals("Derrotado")){
+
+                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
+
                     setSpritesNull();
-
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesIdleHablando/MilesHablando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesIdleHablando/MilesHablandoIdle.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    spriteDisplayFiscalia.setSpriteImage("Sprites/Sprites/MilesSprites/MilesDerrotado/MilesDerrotadoEstatico.gif");
                 }
 
-                if(path=="Leyendo"){
+                if(path.equals("CondescendienteNegando")){
 
                     //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
 
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesPapel/MilesPapel.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesPapel/MilesPapelEstatico.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionMiles("Sprites/Sprites/MilesSprites/MilesCondescendiente/MilesCondescendienteNegando.gif",
+                            "Sprites/Sprites/MilesSprites/MilesCondescendiente/MilesCondescendienteEstatico.gif", 1500);
                 }
 
-                if(path=="Pensando"){
+                if(path.equals("CondescendienteHablando")){
 
                     //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
 
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesPensando/MilesPensando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesPensando/MilesPensandoEstatico.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionMiles("Sprites/Sprites/MilesSprites/MilesCondescendiente/MilesCondescendienteHablando.gif",
+                            "Sprites/Sprites/MilesSprites/MilesCondescendiente/MilesCondescendienteEstatico.gif", 700);
                 }
 
-
-                if(path=="Dedo"){
+                if(path.equals("Reverencia")){
 
                     //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
 
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesDedoCabeza/MilesDedo.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesDedoCabeza/MilesDedoEstatico.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
-                }
-
-                if(path=="Señalando"){
-
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
-
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesSeñalando/MilesSeñalando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesSeñalando/MilesSeñalandoEstatico.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
-                }
-
-                if(path=="Golpe"){
-
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
-
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesGolpe/MilesGolpe.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesGolpe/MilesGolpeEstatico.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
-                }
-
-                if(path=="GolpeHablando"){
-
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
-
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesGolpe/MilesGolpeHablando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesGolpe/MilesGolpeEstatico.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
-                }
-
-                if(path=="GolpeEnfadado"){
-
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
-
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesGolpeEnfadado/GolpeEnfadadoHablando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesGolpeEnfadado/GolpeEnfadadoEstatico.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
-                }
-
-                if(path=="Derrotado"){
-
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesDerrotado/MilesDerrotadoEstatico.gif");
-                }
-
-                if(path=="CondescendienteNegando"){
-
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
-
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesCondescendiente/MilesCondescendienteNegando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesCondescendiente/MilesCondescendienteEstatico.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
-                }
-
-                if(path=="CondescendienteHablando"){
-
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
-
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesCondescendiente/MilesCondescendienteHablando.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesCondescendiente/MilesCondescendienteEstatico.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
-                }
-
-                if(path=="Reverencia"){
-
-                    //ESTA LINEA SIRVE PARA LIMPIAR EL ESTADO ANTERIOR DE LA IMAGEN
-
-                    spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesReverencia/MilesReverencia.gif");
-                    Timer timer = new Timer(700, e -> {
-
-                        spriteDisplayDefensa.setSpriteImage("Sprites/Sprites/MilesSprites/MilesReverencia/MilesreverenciaEstatico.gif");
-                    });
-                    timer.start();
-                    timer.setRepeats(false);
+                    setAnimacionMiles("Sprites/Sprites/MilesSprites/MilesReverencia/MilesReverencia.gif",
+                            "Sprites/Sprites/MilesSprites/MilesReverencia/MilesreverenciaEstatico.gif", 700);
                 }
             }
+    }
+
+    public void setAnimacionJuez(String animacion, String animacionIdle, int milisegundosTimer){
+
+        setSpritesNull();
+        spriteDisplayJuez.setSpriteImage(animacion);
+        Timer timer = new Timer(milisegundosTimer, e -> {
+
+            spriteDisplayJuez.setSpriteImage(animacionIdle);
+        });
+        timer.start();
+        timer.setRepeats(false);
+
+    }
+
+    public void setAnimacionPhoenix(String animacion, String animacionIdle, int milisegundosTimer){
+
+        setSpritesNull();
+        spriteDisplayDefensa.setSpriteImage(animacion);
+        Timer timer = new Timer(milisegundosTimer, e -> {
+
+            spriteDisplayDefensa.setSpriteImage(animacionIdle);
+        });
+        timer.start();
+        timer.setRepeats(false);
+
+    }
+
+    public void setAnimacionMiles(String animacion, String animacionIdle, int milisegundosTimer){
+
+        setSpritesNull();
+        spriteDisplayFiscalia.setSpriteImage(animacion);
+        Timer timer = new Timer(milisegundosTimer, e -> {
+
+            spriteDisplayFiscalia.setSpriteImage(animacionIdle);
+        });
+        timer.start();
+        timer.setRepeats(false);
+
     }
 
     public void setSpritesNull(){
