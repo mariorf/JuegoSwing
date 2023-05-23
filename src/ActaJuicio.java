@@ -82,7 +82,7 @@ public class ActaJuicio extends JFrame {
                 if(SwingUtilities.isLeftMouseButton(e)) {
                     pruebaAmpliada.setVisible(true);
                     pruebaAmpliada.setPruebaAmpliada("ActaJuicio/escenarioCrimen.jpg", "Escena crimen", "El cadaver se encontro cerca del acusado, muerto de un disparo a la cabeza por detras. El acusado " +
-                            "estaba esposado a la pata de la cama y no respondia a estimulos externos, tenia en su bolsillo" +
+                            "estaba esposado a la pata de la cama, no respondia a estimulos externos y parecia recien levantado. Tenia en su bolsillo" +
                             " las llaves de la victima, en el dibujo de la escena se muestran en el piso, aunque se encontraron en su bolsillo. El arma se encontraba en las manos del acusado con una bala disparada" +
                             " cuando se le detuvo. El arma homicida pertenecia a la victima. \n\n" +
                             "Se encontro sangre en la mesa, en la pared de enfrente de la mesa y brotando de la cabeza de la victima. El casero llamo a la policia justo despues del disparo " +

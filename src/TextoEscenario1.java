@@ -34,8 +34,8 @@ public class TextoEscenario1 {
         arrayTexto.add("Las pruebas se te iran dando durante el transcurso del juicio, puedes " +
                 "verlas en todo momento pulsando la tecla A. ");
         //8
-        arrayTexto.add("El juez te ha pedido el arma homicida, pulsa la tecla A y haz click derecho sobre el arma para seleccionarla, luego hazle click a la imagen para presentarla" +
-                "cuando creas conveniente.");
+        arrayTexto.add("El juez te ha pedido el arma homicida, pulsa la tecla A y haz click derecho sobre el arma para seleccionarla, luego hazle click a la imagen en el siguiente" +
+                "dialogo para presentarla.");
 
         //9
         arrayTexto.add("Y bien, defensa?");
@@ -44,14 +44,14 @@ public class TextoEscenario1 {
         arrayTexto.add("La supuesta arma homicida es la pistola de la victima, se encontro disparada en la mano del acusado.");
 
         //11
-        arrayTexto.add("Asi es, la teoria de la fiscalia es que el acusado fue a robar en la habitacion del Sheriff, pero se encontro que aun estaba" +
-                " alli, asi que como Sheriff que es");
+        arrayTexto.add("Asi es, la teoria de la fiscalia es que el acusado fue a robar en la habitacion de la victima, pero se encontro que aun estaba" +
+                " alli, asi que la victima que es");
         //12
-        arrayTexto.add(" fue a detenerlo. Pero el Sheriff debio de haber dejado el arma cerca del acusado, asi que mientras la victima escribia su reporte" +
+        arrayTexto.add(" fue a detenerlo. Pero el Sheriff debio de haber dejado el arma cerca del acusado, asi que mientras escribia su reporte" +
                 " le disparo a traicion por detras");
 
         //13
-        arrayTexto.add("Poco despues, plenamente consciente de lo que habia hecho y aun esposado, acerco el cadaver y busco sus llaves para liberarse," +
+        arrayTexto.add("Poco despues, consciente de lo que habia hecho y aun esposado, acerco el cadaver y busco sus llaves para liberarse," +
                 " pero las llaves que cogio eran las de su casa, no de las esposas");
 
         //14
@@ -61,13 +61,13 @@ public class TextoEscenario1 {
         arrayTexto.add("Un momento.");
 
         //16
-        arrayTexto.add("Contradice los hechos? Podria explicarnos a que se refiere?");
+        arrayTexto.add("Tiene algo que objetar del alegato, defensa?");
 
         //17
-        arrayTexto.add("Segun su relato el acusado deberia haber estado plenamente consciente para arrastrar el cuerpo y coger las llaves.");
+        arrayTexto.add("Segun su relato el acusado se encontraba plenamente consciente para arrastrar el cuerpo y coger las llaves.");
 
         //18
-        arrayTexto.add("Pero acorde al reporte policial de la escena del crimen el acusado se encontraba atontado, como recien despertado.");
+        arrayTexto.add("Pero acorde al reporte policial de la escena del crimen el acusado se encontraba aturdido, recien despertado y no respondia a estimulos externos.");
 
         //19
         arrayTexto.add("...");

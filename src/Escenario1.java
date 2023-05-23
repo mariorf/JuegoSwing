@@ -118,7 +118,7 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual == 3) {
 
-                            gestorSprites.setSprite("Miles", milesEdgeworthSprites.milesEdgeworthSetIdle());
+                            gestorSprites.setSprite("Miles", "Hablando");
                         }
                         if (numeroTextoActual == 4) {
 
@@ -126,19 +126,19 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual == 5) {
 
-                            gestorSprites.setSprite("Juez", juezSprites.juezSetIdle());
+                            gestorSprites.setSprite("Juez", "Hablando");
                             actaJuicio.labelEscenaCrimen.setVisible(true);
                         }
                         if (numeroTextoActual >= 6 && numeroTextoActual < 8) {
 
 
-                            gestorSprites.setSprite("Phoenix", johnSprites.johnSetLlorando());
+                            gestorSprites.setSprite("Phoenix", "GolpeMesa");
                             ui.setNombrePersonaje("Tutorial");
                         }
                         if (numeroTextoActual == 9) {
 
 
-                            gestorSprites.setSprite("Juez", juezSprites.juezSetIdle());
+                            gestorSprites.setSprite("Juez", "Hablando");
 
                             if (numeroTextoActual == 9 && e.getKeyChar() == 'z' || e.getKeyChar() == 'Z') {
                                 numeroTextoActual = 9;
@@ -148,12 +148,12 @@ public class Escenario1 extends JFrame {
                         if (numeroTextoActual == 10) {
 
 
-                            gestorSprites.setSprite("Ama",johnSprites.johnSetLlorando());
+                            gestorSprites.setSprite("Phoenix","Leyendo");
                         }
 
                         if (numeroTextoActual > 10 && numeroTextoActual <= 14) {
 
-                            gestorSprites.setSprite("Miles", milesEdgeworthSprites.milesEdgeworthSetPensando());
+                            gestorSprites.setSprite("Miles", "Leyendo");
 
                             if (numeroTextoActual == 14 && e.getKeyChar() == 'z' || e.getKeyChar() == 'Z') {
                                 numeroTextoActual = 11;
@@ -179,7 +179,7 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual >= 19) {
 
-                            gestorSprites.setSprite("Miles", milesEdgeworthSprites.milesEdgeworthSetSorprendido());
+                            gestorSprites.setSprite("Miles", "CondescendienteNegando");
                         }
                         if (numeroTextoActual > 19) {
 
