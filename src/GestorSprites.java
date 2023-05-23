@@ -16,6 +16,7 @@ public class GestorSprites {
     NoraMarblerSprites noraMarblerSprites;
     PhoenixSprites phoenixSprites;
     UI ui;
+    GestorMusica gestorMusica;
     Background background;
 
 
@@ -29,6 +30,7 @@ public class GestorSprites {
         this.spriteDisplayDefensa=spriteDisplayDefensa;
         this.ui=ui;
         this.background=background;
+        this.gestorMusica=gestorMusica;
     }
 
     public void setSprite(String personaje, String path){
@@ -108,6 +110,7 @@ public class GestorSprites {
                 }
 
                 if(path.equals("GolpeMesa")){
+
 
                     setAnimacionPhoenix("Sprites/Sprites/PhoenixSprites/PhoenixGolpeMesa/PhoenixGolpeMesa.gif",
                             "Sprites/Sprites/PhoenixSprites/PhoenixGolpeMesa/PhoenixGolpeMesaIdle.gif", 700);

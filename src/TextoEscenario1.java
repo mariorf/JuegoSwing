@@ -10,7 +10,7 @@ public class TextoEscenario1 {
     public TextoEscenario1 (){
 
         //0
-        arrayTexto.add("Eres el abogado defensor de un bandido acusado de asesinato, es tu deber junto con la fiscalia el descubirir que es lo que paso el dia del accidente.");
+        arrayTexto.add("Eres el abogado defensor de un bandido acusado de asesinato, es tu deber demostrar su inocencia y descubrir al verdadero culpable.");
 
         //1
         arrayTexto.add("20 de Marzo de 1876, Tribunal de Justicia de Texas.");
@@ -35,7 +35,7 @@ public class TextoEscenario1 {
                 "verlas en todo momento pulsando la tecla A. ");
         //8
         arrayTexto.add("El juez te ha pedido el arma homicida, pulsa la tecla A y haz click derecho sobre el arma para seleccionarla, luego haz click izquierdo a la imagen en el siguiente" +
-                "dialogo para presentarla.");
+                " dialogo para presentarla.");
 
         //9
         arrayTexto.add("Y bien, defensa?");

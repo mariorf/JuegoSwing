@@ -2,17 +2,11 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Escenario1 extends JFrame {
-
-    boolean repetir = false;
-
     int numeroTextoActual = 0;
 
     JLayeredPane contentPane = new JLayeredPane();
@@ -85,6 +79,7 @@ public class Escenario1 extends JFrame {
 
         //CREAR CLASE GESTOR EVENTOS(constructor con todas  las clases que necesite)
         //Eventos
+
         botonPasarTexto.addKeyListener(new KeyListener() {
 
             @Override
@@ -126,6 +121,7 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual == 2) {
 
+                            gestorSprites.setSprite("Juez", "Hablando");
                             actaJuicio.labelEscenaCrimen.setVisible(true);
                         }
                         if (numeroTextoActual == 3) {
@@ -142,7 +138,7 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual >= 6 && numeroTextoActual < 8) {
 
-                            gestorSprites.setSprite("Phoenix", "GolpeMesa");
+                            gestorSprites.setSprite("Phoenix", "IdleSinHablar");
                             ui.setNombrePersonaje("Tutorial");
                         }
                         if (numeroTextoActual == 9) {
