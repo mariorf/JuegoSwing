@@ -1,3 +1,5 @@
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -18,7 +20,7 @@ public class Escenario1 extends JFrame {
     JTextArea campoTextoEsc1 = new JTextArea();
 
 
-    public Escenario1() throws InterruptedException, IOException, AWTException {
+    public Escenario1() throws InterruptedException, IOException, AWTException, UnsupportedAudioFileException, LineUnavailableException {
 
         //Creacion de los objetos para llamar a los sprites de los personajes
         JohnSprites johnSprites = new JohnSprites();
@@ -42,7 +44,7 @@ public class Escenario1 extends JFrame {
         SaveManager saveManager = new SaveManager();
         Robot robot = new Robot();
         GestorSprites gestorSprites = new GestorSprites(spriteDisplayFiscalia, spriteDisplayJuez, spriteDisplayTestigos, spriteDisplayDefensa, background, ui);
-
+        GestorMusica gestorMusica = new GestorMusica();
 
         //Poner los valores necesarios para la ventana
         contentPane = getLayeredPane();
@@ -99,6 +101,18 @@ public class Escenario1 extends JFrame {
 
                 //Para pasar las lineas de dialogo
                 if (e.getKeyChar() == 'z' || e.getKeyChar() == 'Z') {
+
+                    //PONE LA MUSICA SEGUN EN EL NUMERO TEXTO ACTUAL COMO
+                    //PARAMETRO EN EL METODO
+                    try {
+                        gestorMusica.musicaNumero(numeroTextoActual);
+                    } catch (UnsupportedAudioFileException ex) {
+                        throw new RuntimeException(ex);
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    } catch (LineUnavailableException ex) {
+                        throw new RuntimeException(ex);
+                    }
 
                     if (numeroTextoActual <= textoEscenario1.getTamañoArray()) {
 
@@ -158,7 +172,15 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual == 15) {
 
-
+                            try {
+                                gestorMusica.setEfecto("Objection");
+                            } catch (UnsupportedAudioFileException ex) {
+                                throw new RuntimeException(ex);
+                            } catch (IOException ex) {
+                                throw new RuntimeException(ex);
+                            } catch (LineUnavailableException ex) {
+                                throw new RuntimeException(ex);
+                            }
                             gestorSprites.setSprite("Phoenix", "Apuntando");
                         }
                         if (numeroTextoActual == 16) {
