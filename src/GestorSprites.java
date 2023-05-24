@@ -1,7 +1,10 @@
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 
 public class GestorSprites {
@@ -33,7 +36,7 @@ public class GestorSprites {
         this.background=background;
         this.gestorMusica=gestorMusica;
     }
-    public void setSprite(String personaje, String path) {
+    public void setSprite(String personaje, String path) throws UnsupportedAudioFileException, LineUnavailableException, IOException  {
 
             if(personaje=="Juez"){
 
@@ -109,6 +112,7 @@ public class GestorSprites {
 
                 if(path.equals("GolpeMesa")){
 
+                    gestorMusica.setEfecto("GolpeMesa");
 
                     setAnimacionPhoenix("Sprites/Sprites/PhoenixSprites/PhoenixGolpeMesa/PhoenixGolpeMesa.gif",
                             "Sprites/Sprites/PhoenixSprites/PhoenixGolpeMesa/PhoenixGolpeMesaIdle.gif", 700);

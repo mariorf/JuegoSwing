@@ -167,7 +167,7 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual == 15) {
 
-                            gestorSprites.setSprite("Phoenix", "Apuntando");
+                            gestorSprites.setSprite("Phoenix", "GolpeMesa");
                         }
                         if (numeroTextoActual == 16) {
 
