@@ -19,7 +19,8 @@ public class GestorMusica {
 
     Clip clipEfectos = AudioSystem.getClip();
 
-    String nombreClip = "Trial";
+    String nombreClip ="";
+
 
     public GestorMusica() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
     }
@@ -27,8 +28,11 @@ public class GestorMusica {
 
     public void musicaNumero(int n) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
+        System.out.println(nombreClip);
+
         //AQUI PARA PONER TRIAL
-        if ((n < 11)||(n > 14)){
+        if (n < 11){
+
 
             if(!nombreClip.equals("Trial")){
                 clipMusica.stop();
@@ -40,7 +44,7 @@ public class GestorMusica {
             if(clipMusica.isRunning()==false){
                 audioInputStreamMusica = AudioSystem.getAudioInputStream(trialSong);
                 clipMusica.open(audioInputStreamMusica);
-                clipMusica.loop(10);
+                clipMusica.loop(Clip.LOOP_CONTINUOUSLY);
                 clipMusica.start();
             }
         }
@@ -59,14 +63,14 @@ public class GestorMusica {
             if(clipMusica.isRunning()==false){
                 audioInputStreamMusica = AudioSystem.getAudioInputStream(crossExaminationSong);
                 clipMusica.open(audioInputStreamMusica);
-                clipMusica.loop(10);
+                clipMusica.loop(Clip.LOOP_CONTINUOUSLY);
                 clipMusica.start();
             }
         }
 
         //AQUI PARA PONER OBJECTION
-        if ((n >= 15) && (n <= 18)) {
-
+        if (n >= 15) {
+            System.out.println(nombreClip);
 
             if(!nombreClip.equals("Objection")){
                 clipMusica.stop();
@@ -78,7 +82,7 @@ public class GestorMusica {
             if(clipMusica.isRunning()==false){
                 audioInputStreamMusica = AudioSystem.getAudioInputStream(objectionSong);
                 clipMusica.open(audioInputStreamMusica);
-                clipMusica.loop(10);
+                clipMusica.loop(Clip.LOOP_CONTINUOUSLY);
                 clipMusica.start();
             }
         }
