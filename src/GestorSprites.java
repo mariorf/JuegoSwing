@@ -1,6 +1,8 @@
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 
 public class GestorSprites {
 
@@ -10,7 +12,6 @@ public class GestorSprites {
     SpriteDisplayFiscalia spriteDisplayFiscalia;
     SpriteDisplayDefensa spriteDisplayDefensa;
 
-    JohnSprites johnSprites;
     JuezSprites juezSprites;
     MilesEdgeworthSprites milesEdgeworthSprites;
     NoraMarblerSprites noraMarblerSprites;
@@ -32,10 +33,7 @@ public class GestorSprites {
         this.background=background;
         this.gestorMusica=gestorMusica;
     }
-
-    public void setSprite(String personaje, String path){
-
-
+    public void setSprite(String personaje, String path) {
 
             if(personaje=="Juez"){
 

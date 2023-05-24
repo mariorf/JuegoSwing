@@ -17,7 +17,6 @@ public class Escenario1 extends JFrame {
     public Escenario1() throws InterruptedException, IOException, AWTException, UnsupportedAudioFileException, LineUnavailableException {
 
         //Creacion de los objetos para llamar a los sprites de los personajes
-        JohnSprites johnSprites = new JohnSprites();
         PhoenixSprites phoenixSprites = new PhoenixSprites();
         JuezSprites juezSprites = new JuezSprites();
         MilesEdgeworthSprites milesEdgeworthSprites = new MilesEdgeworthSprites();
@@ -168,15 +167,6 @@ public class Escenario1 extends JFrame {
                         }
                         if (numeroTextoActual == 15) {
 
-                            try {
-                                gestorMusica.setEfecto("Objection");
-                            } catch (UnsupportedAudioFileException ex) {
-                                throw new RuntimeException(ex);
-                            } catch (IOException ex) {
-                                throw new RuntimeException(ex);
-                            } catch (LineUnavailableException ex) {
-                                throw new RuntimeException(ex);
-                            }
                             gestorSprites.setSprite("Phoenix", "Apuntando");
                         }
                         if (numeroTextoActual == 16) {
@@ -286,5 +276,19 @@ public class Escenario1 extends JFrame {
             }
 
         });
+    }
+
+    public void setEfecto(String s) throws UnsupportedAudioFileException, LineUnavailableException, IOException {
+
+        try {
+            GestorMusica gestorMusica = new GestorMusica();
+            gestorMusica.setEfecto(s);
+        } catch (UnsupportedAudioFileException ex) {
+            throw new RuntimeException(ex);
+        } catch (LineUnavailableException ex) {
+            throw new RuntimeException(ex);
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 }
