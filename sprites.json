@@ -1,0 +1,64 @@
+{
+  "Juez": {
+    "Asintiendo": {
+      "a": "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezAsintiendo.gif",
+      "b": "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezIdle.gif",
+      "time": 700,
+      "efectoSonido": "Musica/EfectosSonido/ObjectionSinHablar.wav"
+    },
+    "Negando": {
+      "a": "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezNegando.gif",
+      "b": "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezIdle.gif",
+      "time": 700,
+      "efectoSonido": "Musica/EfectosSonido/ObjectionSinHablar.wav"
+    },
+    "Hablando": {
+      "a": "Sprites/Sprites/JuezSprites/JuezHablando/JuezHablando.gif",
+      "b": "Sprites/Sprites/JuezSprites/JuezHablando/JuezIdle.gif",
+      "time": 700,
+      "efectoSonido": "Musica/EfectosSonido/ObjectionSinHablar.wav"
+    },
+    "Serio": {
+      "a": "Sprites/Sprites/JuezSprites/JuezSerio/JuezSerio.gif",
+      "b": "Sprites/Sprites/JuezSprites/JuezSerio/JuezSerioIdle.gif",
+      "time": 700,
+      "efectoSonido": "Musica/EfectosSonido/ObjectionSinHablar.wav"
+    },
+    "Sorprendido": {
+      "a": "Sprites/Sprites/JuezSprites/JuezSorprendido/JuezSorprendidoHablando.gif",
+      "b": "Sprites/Sprites/JuezSprites/JuezSorprendido/JuezSorprendidoIdle.gif",
+      "time": 700,
+      "efectoSonido": "Musica/EfectosSonido/ObjectionSinHablar.wav"
+    }
+  },
+
+
+
+  "Juez": {
+    "Asintiendo": {
+      "a": "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezAsintiendo.gif",
+      "b": "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezIdle.gif",
+      "time": 700
+    },
+    "Negando": {
+      "a": "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezNegando.gif",
+      "b": "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezIdle.gif",
+      "time": 700
+    },
+    "Hablando": {
+      "a": "Sprites/Sprites/JuezSprites/JuezHablando/JuezHablando.gif",
+      "b": "Sprites/Sprites/JuezSprites/JuezHablando/JuezIdle.gif",
+      "time": 700
+    },
+    "Serio": {
+      "a": "Sprites/Sprites/JuezSprites/JuezSerio/JuezSerio.gif",
+      "b": "Sprites/Sprites/JuezSprites/JuezSerio/JuezSerioIdle.gif",
+      "time": 700
+    },
+    "Sorprendido": {
+      "a": "Sprites/Sprites/JuezSprites/JuezSorprendido/JuezSorprendidoHablando.gif",
+      "b": "Sprites/Sprites/JuezSprites/JuezSorprendido/JuezSorprendidoIdle.gif",
+      "time": 700
+    }
+  }
+}
