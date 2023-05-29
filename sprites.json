@@ -4,61 +4,188 @@
       "a": "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezAsintiendo.gif",
       "b": "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezIdle.gif",
       "time": 700,
-      "efectoSonido": "Musica/EfectosSonido/ObjectionSinHablar.wav"
+      "efectoSonido": ""
     },
     "Negando": {
       "a": "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezNegando.gif",
       "b": "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezIdle.gif",
       "time": 700,
-      "efectoSonido": "Musica/EfectosSonido/ObjectionSinHablar.wav"
+      "efectoSonido": ""
     },
     "Hablando": {
       "a": "Sprites/Sprites/JuezSprites/JuezHablando/JuezHablando.gif",
       "b": "Sprites/Sprites/JuezSprites/JuezHablando/JuezIdle.gif",
       "time": 700,
-      "efectoSonido": "Musica/EfectosSonido/ObjectionSinHablar.wav"
+      "efectoSonido": ""
     },
     "Serio": {
       "a": "Sprites/Sprites/JuezSprites/JuezSerio/JuezSerio.gif",
       "b": "Sprites/Sprites/JuezSprites/JuezSerio/JuezSerioIdle.gif",
       "time": 700,
-      "efectoSonido": "Musica/EfectosSonido/ObjectionSinHablar.wav"
+      "efectoSonido": ""
     },
     "Sorprendido": {
       "a": "Sprites/Sprites/JuezSprites/JuezSorprendido/JuezSorprendidoHablando.gif",
       "b": "Sprites/Sprites/JuezSprites/JuezSorprendido/JuezSorprendidoIdle.gif",
       "time": 700,
-      "efectoSonido": "Musica/EfectosSonido/ObjectionSinHablar.wav"
+      "efectoSonido": "Objection"
     }
   },
 
 
 
-  "Juez": {
-    "Asintiendo": {
-      "a": "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezAsintiendo.gif",
-      "b": "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezIdle.gif",
-      "time": 700
-    },
-    "Negando": {
-      "a": "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezNegando.gif",
-      "b": "Sprites/Sprites/JuezSprites/JuezAsintiendoNegando/JuezIdle.gif",
-      "time": 700
-    },
+
+
+
+  "Phoenix": {
     "Hablando": {
-      "a": "Sprites/Sprites/JuezSprites/JuezHablando/JuezHablando.gif",
-      "b": "Sprites/Sprites/JuezSprites/JuezHablando/JuezIdle.gif",
-      "time": 700
+      "a": "Sprites/Sprites/PhoenixSprites/PhoenixHablando/PhoenixHablando.gif",
+      "b": "Sprites/Sprites/PhoenixSprites/PhoenixHablando/PhoenixHablandoIdle.gif",
+      "time": 700,
+      "efectoSonido": ""
     },
-    "Serio": {
-      "a": "Sprites/Sprites/JuezSprites/JuezSerio/JuezSerio.gif",
-      "b": "Sprites/Sprites/JuezSprites/JuezSerio/JuezSerioIdle.gif",
-      "time": 700
+    "GolpeMesa": {
+      "a": "Sprites/Sprites/PhoenixSprites/PhoenixGolpeMesa/PhoenixGolpeMesa.gif",
+      "b": "Sprites/Sprites/PhoenixSprites/PhoenixGolpeMesa/PhoenixGolpeMesaIdle.gif",
+      "time": 700,
+      "efectoSonido": ""
     },
-    "Sorprendido": {
-      "a": "Sprites/Sprites/JuezSprites/JuezSorprendido/JuezSorprendidoHablando.gif",
-      "b": "Sprites/Sprites/JuezSprites/JuezSorprendido/JuezSorprendidoIdle.gif",
-      "time": 700
+    "Apuntando": {
+      "a": "Sprites/Sprites/PhoenixSprites/PhoenixApuntando/PhoenixApuntando.gif",
+      "b": "Sprites/Sprites/PhoenixSprites/PhoenixApuntando/PhoenixApuntandoEstatico.gif",
+      "time": 700,
+      "efectoSonido": ""
+    },
+    "ApuntandoHablando": {
+      "a": "Sprites/Sprites/PhoenixSprites/PhoenixApuntando/PhoenixApuntandoHablando.gif",
+      "b": "Sprites/Sprites/PhoenixSprites/PhoenixApuntando/PhoenixApuntandoEstatico.gif",
+      "time": 700,
+      "efectoSonido": ""
+    },
+    "Asiente": {
+      "a": "Sprites/Sprites/PhoenixSprites/PhoenixAsienteONiega/PhoenixAsiente.gif",
+      "b": "Sprites/Sprites/PhoenixSprites/PhoenixAsienteONiega/PhoenixAsienteNiegaIdle.gif",
+      "time": 700,
+      "efectoSonido": ""
+    },
+    "Niega": {
+      "a": "Sprites/Sprites/PhoenixSprites/PhoenixAsienteONiega/PhoenixNiega.gif",
+      "b": "Sprites/Sprites/PhoenixSprites/PhoenixAsienteONiega/PhoenixAsienteNiegaIdle.gif",
+      "time": 700,
+      "efectoSonido": "Objection"
+    },
+    "Derrotado": {
+      "a": "Sprites/Sprites/PhoenixSprites/PhoenixDerrotado/PhoenixDerrotado.gif",
+      "b": "Sprites/Sprites/PhoenixSprites/PhoenixDerrotado/PhoenixDerrotadoIdle.gif",
+      "time": 700,
+      "efectoSonido": "Objection"
+    },
+    "Leyendo": {
+      "a": "Sprites/Sprites/PhoenixSprites/PhoenixLeyendo/PhoenixLeyendoHablando.gif",
+      "b": "Sprites/Sprites/PhoenixSprites/PhoenixLeyendo/PhoenixLeyendoIdle.gif",
+      "time": 700,
+      "efectoSonido": "Objection"
+    },
+    "Pensando": {
+      "a": "Sprites/Sprites/PhoenixSprites/PhoenixPensando/PhoenixPensandoAnimado.gif",
+      "b": "Sprites/Sprites/PhoenixSprites/PhoenixPensando/PhoenixPensandoIdle.gif",
+      "time": 700,
+      "efectoSonido": "Objection"
+    },
+    "PensandoHablando": {
+      "a": "Sprites/Sprites/PhoenixSprites/PhoenixPensando/PhoenixPensandoHablando.gif",
+      "b": "Sprites/Sprites/PhoenixSprites/PhoenixPensando/PhoenixPensandoIdle.gif",
+      "time": 700,
+      "efectoSonido": "Objection"
+    },
+    "Rascando": {
+      "a": "Sprites/Sprites/PhoenixSprites/PhoenixRascandoCabeza/PhoenixRascandoCabezaHablando",
+      "b": "Sprites/Sprites/PhoenixSprites/PhoenixRascandoCabeza/PhoenixRascandoCabezaEstatico.gif",
+      "time": 700,
+      "efectoSonido": "Objection"
+    },
+    "Sudando": {
+      "a": "Sprites/Sprites/PhoenixSprites/PhoenixSudando/PhoenixSudandoHablando.gif",
+      "b": "Sprites/Sprites/PhoenixSprites/PhoenixSudando/PhoenixSudandoEstatico.gif",
+      "time": 700,
+      "efectoSonido": "Objection"
+    }
+  },
+
+
+
+
+
+
+
+
+
+  "Miles": {
+    "Hablando": {
+      "a": "Sprites/Sprites/MilesSprites/MilesIdleHablando/MilesHablando.gif",
+      "b": "Sprites/Sprites/MilesSprites/MilesIdleHablando/MilesHablandoIdle.gif",
+      "time": 700,
+      "efectoSonido": ""
+    },
+    "Leyendo": {
+      "a": "Sprites/Sprites/MilesSprites/MilesPapel/MilesPapel.gif",
+      "b": "Sprites/Sprites/MilesSprites/MilesPapel/MilesPapelEstatico.gif",
+      "time": 700,
+      "efectoSonido": ""
+    },
+    "Pensando": {
+      "a": "Sprites/Sprites/MilesSprites/MilesPensando/MilesPensando.gif",
+      "b": "Sprites/Sprites/MilesSprites/MilesPensando/MilesPensandoEstatico.gif",
+      "time": 700,
+      "efectoSonido": ""
+    },
+    "Dedo": {
+      "a": "Sprites/Sprites/MilesSprites/MilesDedoCabeza/MilesDedo.gif",
+      "b": "Sprites/Sprites/MilesSprites/MilesDedoCabeza/MilesDedoEstatico.gif",
+      "time": 700,
+      "efectoSonido": ""
+    },
+    "Señalando": {
+      "a": "Sprites/Sprites/MilesSprites/MilesSeñalando/MilesSeñalando.gif",
+      "b": "Sprites/Sprites/MilesSprites/MilesSeñalando/MilesSeñalandoEstatico.gif",
+      "time": 700,
+      "efectoSonido": "Objection"
+    },
+    "Golpe": {
+      "a": "Sprites/Sprites/MilesSprites/MilesGolpe/MilesGolpe.gif",
+      "b": "Sprites/Sprites/MilesSprites/MilesGolpe/MilesGolpeEstatico.gif",
+      "time": 700,
+      "efectoSonido": "Objection"
+    },
+    "GolpeHablando": {
+      "a": "Sprites/Sprites/MilesSprites/MilesGolpe/MilesGolpeHablando.gif",
+      "b": "Sprites/Sprites/MilesSprites/MilesGolpe/MilesGolpeEstatico.gif",
+      "time": 700,
+      "efectoSonido": "Objection"
+    },
+    "GolpeEnfadado": {
+      "a": "Sprites/Sprites/MilesSprites/MilesGolpeEnfadado/GolpeEnfadadoHablando.gif",
+      "b": "Sprites/Sprites/MilesSprites/MilesSeñalando/MilesSeñalandoEstatico.gif",
+      "time": 700,
+      "efectoSonido": "Objection"
+    },
+    "CondescendienteNegando": {
+      "a": "Sprites/Sprites/MilesSprites/MilesCondescendiente/MilesCondescendienteNegando.gif",
+      "b": "Sprites/Sprites/MilesSprites/MilesCondescendiente/MilesCondescendienteEstatico.gif",
+      "time": 700,
+      "efectoSonido": "Objection"
+    },
+    "CondescendienteHablando": {
+      "a": "Sprites/Sprites/MilesSprites/MilesCondescendiente/MilesCondescendienteHablando.gif",
+      "b": "Sprites/Sprites/MilesSprites/MilesCondescendiente/MilesCondescendienteEstatico.gif",
+      "time": 700,
+      "efectoSonido": "Objection"
+    },
+    "Reverencia": {
+      "a": "Sprites/Sprites/MilesSprites/MilesReverencia/MilesReverencia.gif",
+      "b": "Sprites/Sprites/MilesSprites/MilesReverencia/MilesreverenciaEstatico.gif",
+      "time": 700,
+      "efectoSonido": "Objection"
     }
   }
 }

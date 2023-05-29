@@ -92,6 +92,7 @@ public class GestorMusica {
     public void setEfecto(String efecto) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
         if(efecto.equals("Objection")){
+
             audioInputStreamEfectos = AudioSystem.getAudioInputStream(new File("Musica/EfectosSonido/Objection_-Sound-Effect.wav"));
             clipEfectos.open(audioInputStreamEfectos);
 
